@@ -1,3 +1,49 @@
+/* Overides */
+
+html {
+    background-color: rgb(17 16 16);
+}
+
+body {
+    color: white
+}
+
+
+section{
+    width: 50%
+}
+
+/* Project */
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.project .prj-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.prj-info div{
+    max-width: 45%;
+}
+
+.prj-info img{
+    margin: 5% 0em;
+    max-width: 100%;
+} /* Be careful here, this could cause me future issues */
+
+/* .pic-limiter{
+    max-width: 100%;
+} */
+
+
+/* More (but pick better name) */
 .spacer{
     margin-top: 10em;
 }
@@ -9,11 +55,8 @@
     align-items: center;
 }
 
-section{
-    width: 50%
-}
 
-.pic-frame{
+.portrait {
     height: 7em;
     width: 7em;
     border-radius: 50%;
@@ -31,32 +74,8 @@ section{
     flex-direction: row;
 }
 
-.project{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.half{
-    max-width: 45%;
-}
-
-.pic-limiter{
-    max-width: 100%;
-}
 
 
 
 
 
-
-
-
-
-.proj-2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
