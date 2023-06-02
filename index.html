@@ -102,11 +102,25 @@
             <h2 id="jump_contact">CONTACT</h2>
             <hr>
             <script>
+                function copiedNotification(msg, duration){
+
+                    var notification = document.createElement("div");
+                    notification.setAttribute("style","position:fixed; bottom:10%; left:50%; background-color: gray; color:aqua; z-index: 999");
+                    notification.innerHTML = msg;
+                    setTimeout(function(){
+                        notification.parentNode.removeChild(notification);
+                        console.log("remove child")
+                    },duration);
+
+                    document.body.appendChild(notification);
+                }
+
                 function copyFunction() {
                     navigator.clipboard.writeText("matthewrwalloch+Hire@gmail.com");
+                    copiedNotification("Email copied to Clipboard!", 2000);
                 }
             </script>
-            <button onclick="copyFunction()">Copy Email</button>
+            <p>Please contact me via email with a subject line of "Job"<button onclick="copyFunction()">Copy Email</button></p>
 
         </section>
     </main>  
