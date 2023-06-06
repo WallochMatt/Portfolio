@@ -8,9 +8,55 @@ body {
     color: white
 }
 
-
 section{
     width: 50%
+}
+
+nav {
+    height: 3.1em; /* This is the same height as not selecting a height, so this is to be added for the counter-nav class */
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgb(127, 161, 242);
+    top: 0%
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav a:link{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: red;
+    /* background-color: black; */
+}
+
+nav a:active{
+    text-decoration: none;
+    color: white;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color:white
 }
 
 /* Project */
@@ -41,6 +87,28 @@ section{
 /* .pic-limiter{
     max-width: 100%;
 } */
+
+
+
+/* Nav */
+
+.nav-list {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter-nav{
+    height: 3.1em;
+}
+
+
+
+
+
+
+
 
 
 /* More (but pick better name) */
