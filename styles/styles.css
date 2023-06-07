@@ -12,51 +12,9 @@ section{
     width: 50%
 }
 
-nav {
-    height: 3.1em; /* This is the same height as not selecting a height, so this is to be added for the counter-nav class */
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    background-color: rgb(127, 161, 242);
-    top: 0%
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-nav a:link{
+a:link, a:visited{
     text-decoration: none;
     color: white;
-}
-
-nav a:visited{
-    text-decoration: none;
-    color: white;
-}
-
-nav a:hover{
-    text-decoration: none;
-    color: red;
-    /* background-color: black; */
-}
-
-nav a:active{
-    text-decoration: none;
-    color: white;
-}
-
-a:link{
-    text-decoration: none;
-    color: white;
-}
-
-a:visited{
-    text-decoration: none;
-    color:white
 }
 
 /* Project */
@@ -91,6 +49,34 @@ a:visited{
 
 
 /* Nav */
+nav {
+    height: 3.1em; /* This is the same height as not selecting a height, so this is to be added for the counter-nav class */
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #303058;
+    top: 0%;
+}
+
+nav ul {
+    display: flex;
+    width: 50%;
+    padding-left: 25%;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: #b0b0e8;
+    /* background-color: black; */
+}
+
+nav a:active{
+    text-decoration: none;
+    color: white;
+}
 
 .nav-list {
     list-style-type: none;
@@ -102,12 +88,6 @@ a:visited{
 .counter-nav{
     height: 3.1em;
 }
-
-
-
-
-
-
 
 
 
