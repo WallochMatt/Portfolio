@@ -8,6 +8,8 @@
     <meta name="author" content="Matthew Walloch">
     <link rel="stylesheet" tyoe="text/css" href="styles/styles.css">
     <title>Matthew Walloch Portfolio</title>
+    <script src="https://kit.fontawesome.com/5ff3881ccc.js" crossorigin="anonymous"></script>
+    <!-- <script data-search-pseudo-ekements defer src="https://kit.fontawesome.com/5ff3881ccc.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <main class="master-align">
@@ -119,7 +121,7 @@
                 function copiedNotification(msg, duration){
 
                     var notification = document.createElement("div");
-                    notification.setAttribute("style","position:fixed; bottom:10%; left:50%; background-color: gray; color:aqua; z-index: 999");
+                    notification.setAttribute("class", "copy-popup");
                     notification.innerHTML = msg;
                     setTimeout(function(){
                         notification.parentNode.removeChild(notification);
@@ -134,7 +136,15 @@
                     copiedNotification("Email copied to Clipboard!", 2000);
                 }
             </script>
-            <p>Please contact me via email with a subject line of "Job"<button onclick="copyFunction()">Copy Email</button></p>
+
+            <p>Please contact me via email with a subject line of "Job"<span style="cursor: pointer;" onclick="copyFunction()" class="fa-solid fa-copy fa-bounce"></span></p>
+            
+            <div class="icon-section">
+                <i class="fa-brands fa-linkedin fa-5x" style="color: #5286e0;"></i>
+                <i class="fa-brands fa-github fa-5x" style="color: #ffffff;"></i>
+            </div>
+            
+
 
         </section>
     </main>  
