@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import Navbar from './components/NavBar';
+import "./styles/styles.css"
 // Break these into components
 
 function App() {
   return (
-
+    
     // function copiedNotification(msg, duration){
 
     //   var notification = document.createElement("div");
@@ -23,16 +25,10 @@ function App() {
     // }
     
     <div >
+      <Navbar />
       <main className="master-align">
         <header className="counter-nav"></header>
-        <nav>
-            <ul>
-                <li><a href="#jump_home">HOME</a></li>
-                <li><a href="#jump_about">ABOUT</a></li>   
-                <li><a href="#jump_projects">PROJECTS</a></li>    
-                <li><a href="#jump_contact">CONTACT</a></li>
-            </ul>
-        </nav>
+        
         
 
         <section className="spaced-row">
