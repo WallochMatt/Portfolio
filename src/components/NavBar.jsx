@@ -10,6 +10,7 @@ const Navbar = () => {
                 <li><a href="#jump_contact">CONTACT</a></li>
             </ul>
         </nav>
+        
     )
 }
 
