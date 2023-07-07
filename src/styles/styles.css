@@ -20,6 +20,10 @@ a:link, a:visited{
 
 /* Project */
 
+.projPage{
+    margin: 0% 5%;
+}
+
 .project {
     display: flex;
     flex-direction: column;
@@ -28,6 +32,8 @@ a:link, a:visited{
 }
 
 .project .prj-info {
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
