@@ -116,27 +116,39 @@ nav a:active{
 /* HomePage */
 
 .temp-banner{
-    background-image: url(https://assets.entrepreneur.com/content/3x2/2000/20160628101609-Coding.jpeg);
-    background-color: pink;
-    height: 40em;
     width: 100%;
-    background-size: auto;
-    background-position: -5rem -7rem;
+    height: 40em;
 }
 
-.temp-button{
+.temp-banner .img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0em -5em;
+    filter: blur(3px) grayscale(66%) contrast(1.15); 
+}
+
+.temp-banner .btn{
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 5%;
+
     background-color: green;
     height: 5%;
-    position: relative;
-    top: 75%;
+    position: absolute;
+    top: 60%;
     left: 75%;
     max-width: 10%;
-    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
 }
 
 .spaced-row{
-    margin: 3em;
-    width: 95%;
+    margin-top: 1em;
+    width: 98%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;

@@ -3,12 +3,12 @@ const HomePage = () => {
     return (
         <main className="master-align">
             <div className="temp-banner">
-                
-                <div className="temp-button">
-                    See the projects!
-                </div>
+                <img className="img" src="https://assets.entrepreneur.com/content/3x2/2000/20160628101609-Coding.jpeg"></img>
+                <button className="btn">See the projects! »</button>
 
             </div>
+                
+            
 
             <div className="spaced-row">
                 <div>
