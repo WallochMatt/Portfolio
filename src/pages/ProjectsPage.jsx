@@ -2,6 +2,7 @@ import { useState } from "react";
 import DisplayComCon from "../components/Display-CombatConsensus";
 import DisplayCaraCara from "../components/Display-CaraCara";
 import DisplayUToob from "../components/Display-uToob";
+import ProjectCard from "../components/ProjectCard";
 
 const ProjectsPage = () => {
     const [display, setDisplay] = useState([]);
@@ -13,8 +14,6 @@ const ProjectsPage = () => {
                 <DisplayComCon />
             </div>
         );
-    
-
     };
 
     const displayCaraCara = (e) =>{
@@ -38,9 +37,18 @@ const ProjectsPage = () => {
     return ( 
 
         <main className="master-align projPage">
-            <button onClick={displayComCon}>test</button>
-            <button onClick={displayCaraCara}>test</button>
-            <button onClick={displayUToob}>test</button>
+            <div className="horz-cards">
+                <div onClick={displayComCon}>
+                    <ProjectCard name={'Combat Consensus'} img={require("../assets/CC-example-2.png")} />
+                </div>
+                <div onClick={displayCaraCara}>
+                    <ProjectCard name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")} />
+                </div>
+                <div onClick={displayUToob}>
+                    <ProjectCard name={'uToob'}  />
+                </div>
+            </div>
+
             {display}
         </main>
     );
