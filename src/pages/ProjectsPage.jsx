@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DisplayComCon from "../components/Display-CombatConsensus";
 import DisplayCaraCara from "../components/Display-CaraCara";
 import DisplayUToob from "../components/Display-uToob";
@@ -6,6 +6,10 @@ import ProjectCard from "../components/ProjectCard";
 
 const ProjectsPage = () => {
     const [display, setDisplay] = useState([]);
+
+    useEffect(() => {
+        console.log("Display is ", display)
+    })
 
     const displayComCon = (e) =>{
         e.preventDefault();
@@ -33,6 +37,23 @@ const ProjectsPage = () => {
             </div>
         );
     };
+
+    const displayOff = (e) => {
+        e.preventDefault();
+        console.log("display off and equals: ", display)
+        setDisplay(
+            []
+        )
+    }
+
+    function checkDisplay(display) {
+        if (display.length !== 0) {
+            return(
+                <i className="arrow up"></i>
+            )
+        }
+    }
+
     
     return ( 
 
@@ -45,8 +66,12 @@ const ProjectsPage = () => {
                     <ProjectCard name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")} />
                 </div>
                 <div onClick={displayUToob}>
-                    <ProjectCard name={'uToob'}  />
+                    <ProjectCard name={'uToob'} img={require("../assets/uToobThumbnail.png")} />
                 </div>
+            </div>
+
+            <div onClick={displayOff} className="separator">
+                {checkDisplay(display)}
             </div>
 
             {display}
