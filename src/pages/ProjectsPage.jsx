@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DisplayComCon from "../components/Display-CombatConsensus";
 import DisplayCaraCara from "../components/Display-CaraCara";
 import DisplayUToob from "../components/Display-uToob";
@@ -6,10 +6,6 @@ import ProjectCard from "../components/ProjectCard";
 
 const ProjectsPage = () => {
     const [display, setDisplay] = useState([]);
-
-    useEffect(() => {
-        console.log("Display is ", display)
-    })
 
     const displayComCon = (e) =>{
         e.preventDefault();
@@ -40,7 +36,6 @@ const ProjectsPage = () => {
 
     const displayOff = (e) => {
         e.preventDefault();
-        console.log("display off and equals: ", display)
         setDisplay(
             []
         )
@@ -56,7 +51,6 @@ const ProjectsPage = () => {
 
     
     return ( 
-
         <main className="master-align projPage">
             <div className="horz-cards">
                 <div onClick={displayComCon}>

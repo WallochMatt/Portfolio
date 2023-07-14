@@ -187,6 +187,8 @@ nav a:active{
 }
 
 
+
+
 .copy-popup{
     position: fixed; 
     bottom: 20%; 
@@ -201,6 +203,55 @@ nav a:active{
     justify-content: center;
 }
 
+/* AboutPage */
+
+.prt-large {
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: aquamarine;
+    background-image: url(../assets/Portrait.jpeg);
+    background-position: -6rem -4rem;
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
+.about{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.abt-text{
+    width: 50%;
+}
+
+.custom-fa{
+    font-size: 5em;
+}
+
+.html-badge{
+    color: orangered;
+}
+
+.css-badge{
+    color: #216ae8;
+}
+
+.bootstrap-badge{
+    color: #8a0ec4;
+}
+
+.react-badge{
+    color: #30b7d9;
+}
+
+.fontawesome-badge{
+    color: #5b8adc;
+}
+
 /* ProjectPage */
 
 .separator{
@@ -211,7 +262,7 @@ nav a:active{
 
 .arrow {
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 3px;
 }
