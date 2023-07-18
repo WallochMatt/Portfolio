@@ -20,15 +20,14 @@ a:link, a:visited{
 
 /* Project */
 
-.projPage{
-    margin: 0% 5%;
-}
+
 
 .project {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0% 5%;
 }
 
 .project .prj-info {
@@ -166,13 +165,11 @@ nav a:active{
     margin-top: 10em;
 }
 
-
 .master-align {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 .portrait {
     height: 9em;
@@ -185,9 +182,6 @@ nav a:active{
     background-size: 150%;
     background-repeat: no-repeat;
 }
-
-
-
 
 .copy-popup{
     position: fixed; 
@@ -206,22 +200,18 @@ nav a:active{
 /* AboutPage */
 
 .prt-large {
-    height: 12em;
-    width: 12em;
-    border-radius: 50%;
+    width: 40%;
     display: inline-block;
-    background-color: aquamarine;
     background-image: url(../assets/Portrait.jpeg);
-    background-position: -6rem -4rem;
-    background-size: 150%;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .about{
-    margin-top: 2em;
+    margin: 2em 15%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .abt-text{
@@ -252,6 +242,23 @@ nav a:active{
     color: #5b8adc;
 }
 
+.about-tech{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+footer i{
+    padding: 2rem;
+}
+
+.about-section{
+    height: 40em;
+    background-image: linear-gradient(140deg, #b3a4e7 13%, #1f14fa 40%, #00094b 73%, transparent);
+}
+
+
+
 /* ProjectPage */
 
 .separator{
@@ -276,11 +283,47 @@ transform: rotate(-135deg);
 -webkit-transform: rotate(-135deg);
 }
 
+.github-badge{
+    color: #ffffff;
+}
+
+.repo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.proj-foot{
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-image: linear-gradient(140deg, transparent, #353264 40%, #55447b 73%, #ba83b8);
+}
+
+.proj-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40em;
+    margin-top: 1.5em;
+}
+
+.close-arrow{
+    z-index: 10;
+    position: fixed;
+    bottom: 8em;
+}
+
+
+
 /* Cards */
 
 .horz-cards{
     display: flex;
     flex-direction: row;
+
 }
 
 .card-size{
@@ -302,3 +345,4 @@ transform: rotate(-135deg);
     height: 100%;
     width: 100%;
 }
+

@@ -15,6 +15,7 @@ const DisplayCaraCara = () => {
                     <p>Example text of an explaination for the project, same infor as the lorem ispum above simulates</p>
                 </div>    
             </div>
+            <div className="separator"></div>
         </div>
     );
 }

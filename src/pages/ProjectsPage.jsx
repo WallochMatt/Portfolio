@@ -49,26 +49,36 @@ const ProjectsPage = () => {
         }
     }
 
-    
     return ( 
-        <main className="master-align projPage">
-            <div className="horz-cards">
-                <div onClick={displayComCon}>
-                    <ProjectCard name={'Combat Consensus'} img={require("../assets/CC-example-2.png")} />
+        <main >
+            <body className="proj-body">
+                <div className="horz-cards">
+                    <div onClick={displayComCon}>
+                        <ProjectCard name={'Combat Consensus'} img={require("../assets/CC-example-2.png")} />
+                    </div>
+                    <div onClick={displayCaraCara}>
+                        <ProjectCard name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")} />
+                    </div>
+                    <div onClick={displayUToob}>
+                        <ProjectCard name={'uToob'} img={require("../assets/uToobThumbnail.png")} />
+                    </div>
                 </div>
-                <div onClick={displayCaraCara}>
-                    <ProjectCard name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")} />
-                </div>
-                <div onClick={displayUToob}>
-                    <ProjectCard name={'uToob'} img={require("../assets/uToobThumbnail.png")} />
-                </div>
-            </div>
 
-            <div onClick={displayOff} className="separator">
-                {checkDisplay(display)}
-            </div>
+                <div onClick={displayOff} className="close-arrow">
+                    {checkDisplay(display)}
+                </div>
 
-            {display}
+                {display}
+                
+                <div className="proj-foot">
+                    <h2 className="repo">See all my project repositories on Github!
+                        <i title="" class="fa-brands fa-github custom-fa github-badge"></i>
+                    </h2>
+                </div>
+            </body>
+
+
+
         </main>
     );
 
