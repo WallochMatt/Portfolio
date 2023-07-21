@@ -7,7 +7,13 @@ import { Link } from "react-router-dom";
 
 const ProjectsPage = () => {
     const [display, setDisplay] = useState([]);
-
+    /* const [cardClass, setCardClass] = useState(["card-size"]);
+    Using   setCardClass("card-size add-border") in onClick functions
+    test={cardClass} in the instantiation of the Card
+    Utilizes add-border style
+    If a border for the active Display is needed, I could do 3 separate state functions
+    Looking for a better way to achieve that effect
+*/
     const displayComCon = (e) =>{
         e.preventDefault();
         setDisplay        (
@@ -58,13 +64,13 @@ const ProjectsPage = () => {
             <body className="proj-body">
                 <div className="horz-cards">
                     <div onClick={displayComCon}>
-                        <ProjectCard name={'Combat Consensus'} img={require("../assets/CC-example-2.png")} />
+                        <ProjectCard name={'Combat Consensus'} img={require("../assets/CC-example-2.png")}/>
                     </div>
                     <div onClick={displayCaraCara}>
-                        <ProjectCard name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")} />
+                        <ProjectCard name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")}/>
                     </div>
                     <div onClick={displayUToob}>
-                        <ProjectCard name={'uToob'} img={require("../assets/uToobThumbnail.png")} />
+                        <ProjectCard name={'uToob'} img={require("../assets/uToobThumbnail.png")}/>
                     </div>
                 </div>
 
@@ -82,9 +88,6 @@ const ProjectsPage = () => {
                     </h2>
                 </div>
             </body>
-
-
-
         </main>
     );
 

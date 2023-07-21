@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const DisplayComCon = () => {
     return ( 
         <div className="project">
@@ -5,19 +7,22 @@ const DisplayComCon = () => {
             
             <div className="prj-info">
                 <div>
-                    <a href="http://3.143.230.10/" target="_blank">
-                        <img src={require("../assets/CC-example-1.png")}></img>
-                        
-                    </a>
+                    <div className="img-background">
+                        <Link to="http://3.143.230.10/" target="_blank">
+                            <img src={require("../assets/CC-example-1.png")}></img>   
+                        </Link>
+                    </div>  
+
+                    <div className="separator"></div>
     
-                    <a href="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
-                        <div className="youtube-background">
+                    <div className="img-background">
+                        <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
                             <img src={require("../assets/CC-example-3.png")}></img>
                             <div className="youtube-icon">
                                 <i className="fa-brands fa-youtube fa-4x" style={{color: "#ff0000"}}></i>
                             </div>
-                        </div>
-                    </a>
+                        </Link>
+                    </div>
                 </div>
     
                 <div>
