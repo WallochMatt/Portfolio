@@ -3,6 +3,7 @@ import DisplayComCon from "../components/Display-CombatConsensus";
 import DisplayCaraCara from "../components/Display-CaraCara";
 import DisplayUToob from "../components/Display-uToob";
 import ProjectCard from "../components/ProjectCard";
+import { Link } from "react-router-dom";
 
 const ProjectsPage = () => {
     const [display, setDisplay] = useState([]);
@@ -44,7 +45,10 @@ const ProjectsPage = () => {
     function checkDisplay(display) {
         if (display.length !== 0) {
             return(
-                <i className="arrow up"></i>
+                <div className="close-arrow">
+                    <i className="arrow up"></i>
+                </div>
+                
             )
         }
     }
@@ -64,15 +68,17 @@ const ProjectsPage = () => {
                     </div>
                 </div>
 
-                <div onClick={displayOff} className="close-arrow">
+                <div onClick={displayOff} >
                     {checkDisplay(display)}
                 </div>
 
                 {display}
                 
                 <div className="proj-foot">
-                    <h2 className="repo">See all my project repositories on Github!
-                        <i title="" class="fa-brands fa-github custom-fa github-badge"></i>
+                    <h2 className="repo">See all my project repositories on Github! &nbsp; &nbsp;
+                        <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank">
+                            <i title="My Github page" class="fa-brands fa-github custom-fa github-badge"></i>
+                        </Link>
                     </h2>
                 </div>
             </body>

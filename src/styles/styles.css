@@ -311,9 +311,16 @@ transform: rotate(-135deg);
 }
 
 .close-arrow{
+    background: rgba(43, 43, 65, 0.66);
+    display: flex;
+    width: 2em;
+    height: 2em;
+    align-items: center;
+    justify-content: center;
+
     z-index: 10;
     position: fixed;
-    bottom: 8em;
+    bottom: 9em;
 }
 
 
