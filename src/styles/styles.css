@@ -18,36 +18,6 @@ a:link, a:visited{
     color: white;
 }
 
-/* Project */
-.project {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 5% 5%;
-}
-
-.project .prj-info {
-    width: 100%;
-    margin: 3% 0%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-.prj-info div{
-    max-width: 45%;
-}
-
-.prj-info img{
-    margin: 5% 0em;
-    max-width: 100%;
-} /* Be careful here, this could cause me future issues */
-
-/* .pic-limiter{
-    max-width: 100%;
-} */
 
 
 
@@ -374,37 +344,69 @@ footer i{
     cursor: pointer;
 }
 
+/* Project */
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5% 5%;
+}
+
+.project .prj-info {
+    width: 100%;
+    margin: 3% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.prj-info div{
+    max-width: 45%;
+}
+
+.prj-info img{
+    margin: 5% 0em;
+    max-width: 100%;
+} /* Be careful here, this could cause me future issues */
+
+/* .pic-limiter{
+    max-width: 100%;
+} */
+
 
 /* Cards */
 
 .horz-cards{
     display: flex;
     flex-direction: row;
-
 }
 
-.card-size{
+.card{
     width: 20em;
-    max-width: 25em;
-    min-width: 10em;
     height: 20em;
     margin: 1em;
 }
 
-.card-size:hover{
+.card:hover{
     width: 22em;
     height: 22em;
     cursor: pointer;
 }
 
-.card-image{
-    object-fit: cover;
+
+.card-img-cust{
+    display: block;
+    border-top-left-radius: var(--bs-card-inner-border-radius);
+    border-top-right-radius: var(--bs-card-inner-border-radius);
+
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
-/* .add-border{
-    border: solid pink;
-    border-width: 2px;
-} */
+.card-title{
+    font-size: 24px;
+} 
 

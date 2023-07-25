@@ -1,13 +1,18 @@
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const ProjectCard = (props) => {
     return (
-        <Card className="card-size">
-            <Card.Img className='card-image' src={props.img}/>
-            <Card.Body>
-                <Card.Title>{props.name}</Card.Title>
-            </Card.Body>
-        </Card>
+    <Card>
+        <Card.Img variant="cust" src={props.img} />
+        <Card.Body>
+            <Card.Title>{props.name}</Card.Title>
+            <Card.Text>
+            Click on a card to view more info
+            </Card.Text>
+            {/* <Button variant="primary">Go somewhere</Button> */}
+        </Card.Body>
+    </Card>
     );
 }
 
