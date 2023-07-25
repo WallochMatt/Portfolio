@@ -7,14 +7,19 @@ const HomePage = () => {
 
                 <div className="banner-inside">
 
-                    <h1 className="">Matthew Walloch</h1>
+                    <p className="banner-text">MATTHEW WALLOCH</p>
 
-                    <h2>Fullstack Web Developer</h2>
+                    <h2>FULLSTACK WEB DEVELOPER</h2>
 
                     {/* <p>"Why do programmers use dark mode? It keeps the bugs away."</p> */}
+                    <hr/>
 
                     <Link to={"/projects"}>
-                        <button className="btn">See the projects! »</button>
+                        <button className="btn">SEE MY WORK
+                            &nbsp;
+                            <i className="arrow right"></i>
+                            &nbsp;
+                        </button>
                     </Link>
 
                 </div>

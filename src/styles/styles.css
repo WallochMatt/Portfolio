@@ -19,9 +19,6 @@ a:link, a:visited{
 }
 
 /* Project */
-
-
-
 .project {
     display: flex;
     flex-direction: column;
@@ -122,15 +119,40 @@ nav a:active{
     margin: 0;
 }
 
+/* Universal */
+
+.arrow {
+    border: solid;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.up {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+.right{
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+}
+
 /* HomePage */
+
+.banner-text{
+    margin: 2px;
+    font-size: 46px;
+}
 
 .banner{
     position: relative;
     display: grid;
     place-items: center;
-    color: #ff43ea;
+    color: #ffffff;
     width: 100%;
     height: 46vw; 
+
+    text-shadow: #635f5f -7px -6px 15px;
      /* Find better measurement */
 }
 
@@ -142,20 +164,33 @@ nav a:active{
     background-image: url("https://assets.entrepreneur.com/content/3x2/2000/20160628101609-Coding.jpeg");
     width: 100%;
     height: 100%;
-    filter: blur(3px) grayscale(66%) contrast(1.15);
+    filter: blur(3px) grayscale(70%) contrast(1.15);
 }
 
 .banner .btn{
     display: flex;
     align-items: center;
-    padding: 4px;
-    border-radius: 5%;
-    background-color: green;
-    height: 5%;
-    color: white;
-    border: none;
+    padding: 5px;
+    border-radius: 3%;
+    background-color: transparent;
+    height: 3em;
+    color: rgb(255, 255, 255);
+    border: solid 2px;
+    border-color: #8a0ec4;
     cursor: pointer;
     font-size: 18px;
+}
+
+.banner .btn:hover{
+    background-color: rgb(164, 89, 235);
+    border: solid 3px;
+    border-color: #ffffff;
+    /* color: gray; */
+}
+
+.banner hr{
+    width: 15%;
+    margin-bottom: 3vh;
 }
 
 .banner-inside{
@@ -293,18 +328,7 @@ footer i{
     align-items: center;
 }
 
-.arrow {
-    border: solid white;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 3px;
-}
 
-
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
 
 .github-badge{
     color: #ffffff;
