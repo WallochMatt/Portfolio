@@ -62,6 +62,23 @@ const ProjectsPage = () => {
     return ( 
         <main >
             <body className="proj-body">
+
+                <div className="counter-header"></div>
+
+                <div className="proj-header">
+
+                    <div className="gh-link">
+                        <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank"> 
+                            <h2 className="repo">See all my project repositories on Github! &nbsp; &nbsp;
+                                <i title="My Github page" class="fa-brands fa-github custom-fa github-badge"></i>
+                            </h2>
+                        </Link>
+                    </div>
+
+                
+                </div>
+
+
                 <div className="horz-cards">
                     <div onClick={displayComCon}>
                         <ProjectCard name={'Combat Consensus'} img={require("../assets/CC-example-2.png")}/>
@@ -80,13 +97,7 @@ const ProjectsPage = () => {
 
                 {display}
                 
-                <div className="proj-foot">
-                    <h2 className="repo">See all my project repositories on Github! &nbsp; &nbsp;
-                        <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank">
-                            <i title="My Github page" class="fa-brands fa-github custom-fa github-badge"></i>
-                        </Link>
-                    </h2>
-                </div>
+
             </body>
         </main>
     );

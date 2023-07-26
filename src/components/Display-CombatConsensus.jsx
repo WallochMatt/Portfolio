@@ -37,7 +37,7 @@ const DisplayComCon = () => {
                     </p>
                 </div>
             </div>
-            <div className="separator"></div>
+
         </div>
     );
 }
