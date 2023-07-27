@@ -75,20 +75,15 @@ const ProjectsPage = () => {
                         </Link>
                     </div>
 
-                
                 </div>
 
 
                 <div className="horz-cards">
-                    <div onClick={displayComCon}>
-                        <ProjectCard name={'Combat Consensus'} img={require("../assets/CC-example-2.png")}/>
-                    </div>
-                    <div onClick={displayCaraCara}>
-                        <ProjectCard name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")}/>
-                    </div>
-                    <div onClick={displayUToob}>
-                        <ProjectCard name={'uToob'} img={require("../assets/uToobThumbnail.png")}/>
-                    </div>
+                    <ProjectCard click={displayComCon} name={'Combat Consensus'} class={'cic soda'}/>
+
+                    <ProjectCard click={displayCaraCara} name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")}/>
+                    
+                    <ProjectCard click={displayUToob} name={'uToob'} img={require("../assets/uToobThumbnail.png")}/>
                 </div>
 
                 <div onClick={displayOff} >
@@ -96,12 +91,9 @@ const ProjectsPage = () => {
                 </div>
 
                 {display}
-                
-
             </body>
         </main>
     );
-
 
 }
 
