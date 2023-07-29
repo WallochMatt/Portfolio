@@ -176,6 +176,7 @@ nav a:active{
     align-items: center;
 }
 
+
 /* More (but pick better name) */
 .spacer{
     margin-top: 10em;
@@ -212,6 +213,8 @@ nav a:active{
     align-items: center;
     justify-content: center;
 }
+
+
 
 /* AboutPage */
 .prt-large {
@@ -272,6 +275,8 @@ footer i{
     background-image: linear-gradient(140deg, #b3a4e7 13%, #1f14fa 40%, #00094b 73%, transparent);
 }
 
+
+
 /* ProjectPage */
 .counter-header{
     min-height: 8em;
@@ -325,7 +330,6 @@ footer i{
     height: 2em;
     align-items: center;
     justify-content: center;
-
     z-index: 10;
     position: fixed;
     bottom: 5em;
@@ -373,6 +377,7 @@ footer i{
     flex-direction: row;
 }
 
+
 .card{
     width: 20em;
     height: 20em;
@@ -386,24 +391,7 @@ footer i{
 }
 
 
-
-/* 
-.card-img-cust{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-left-radius: var(--bs-card-inner-border-radius);
-    border-top-right-radius: var(--bs-card-inner-border-radius);
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
-
-
-.cic{
+.card-format{
     position: relative;
     display: grid;
     place-items: center;
@@ -412,76 +400,52 @@ footer i{
     height: 100%; 
 }
 
-.cic::before{
+.card-format::before{
     content: "";
     position: absolute;
     top: 0;
     left:0;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../assets/CC-example-2.png");
-
 }
 
-.cic:hover::before{
+.card-format:hover::before{
     opacity: .3;
 }
 
 
-
-
-
 .card-title{
-    font-size: 24px;
+    font-size: 2rem;
 } 
 
-.card-subtitle{
-    opacity: 0;
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
-    left: 4.4vh;
-    right: 4.4vh;
-    -webkit-transition: all cubic-bezier(.4,0,.2,1) .4s;
-    -o-transition: all cubic-bezier(.4,0,.2,1) .4s;
-    transition: all cubic-bezier(.4,0,.2,1) .4s;
-}
-
-.card:hover .card-subtitle{
-    opacity: 1;
-    color: rgb(206, 96, 226);
-    font-size: 20px;
-
-}
-
-
-
-
-
-
-
 .card-text{
-    position: relative;
     display: flex;
     position: relative;
     align-items: center;
     flex-direction: column;
+    font-size: large;
     color: transparent;
-    /* Possible additions like: font: bold */
 }
-
-
 
 .card:hover .card-text{
     color: white;
 } 
 
 
+/* Card Images */
 
-.card:hover .card-img-cust{
-    opacity: .5;
+.comcon-img::before{
+    background-image: url("../assets/CC-example-2.png");
 }
 
+.cara-img::before{
+    background-image: url("../assets/CaraCara-example-1.png");
+    background-position: 50%, 0em;
+}
 
+.utube-img::before{
+    background-image: url("../assets/uToobThumbnail.png");
+    background-position: 44%;
+}

@@ -79,11 +79,11 @@ const ProjectsPage = () => {
 
 
                 <div className="horz-cards">
-                    <ProjectCard click={displayComCon} name={'Combat Consensus'} class={'cic soda'}/>
+                    <ProjectCard click={displayComCon} name={'Combat Consensus'} thumbnail={'comcon-img'} descr={""} />
 
-                    <ProjectCard click={displayCaraCara} name={'Cara Cara'} img={require("../assets/CaraCara-example-1.png")}/>
+                    <ProjectCard click={displayCaraCara} name={'Cara Cara'} thumbnail={'cara-img'} descr={""} />
                     
-                    <ProjectCard click={displayUToob} name={'uToob'} img={require("../assets/uToobThumbnail.png")}/>
+                    <ProjectCard click={displayUToob} name={'uToob'} thumbnail={'utube-img'} descr={""} />
                 </div>
 
                 <div onClick={displayOff} >
