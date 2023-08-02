@@ -20,7 +20,9 @@ a:link, a:visited{
 
 /* Nav */
 nav {
-    height: 3.1em; /* This is the same height as not selecting a height, so this is to be added for the counter-nav class */
+    display: flex;
+    height: 4em; /* This is the same height as not selecting a height, so this is to be added for the counter-nav class */
+    align-items: center;
     width: 100%;
     position: fixed;
     z-index: 999;
@@ -36,6 +38,10 @@ nav ul {
     justify-content: space-around;
     list-style-type: none;
     text-decoration: none;
+}
+
+nav li {
+    font-size: 18px;
 }
 
 nav a:hover{
@@ -106,7 +112,8 @@ nav a:active{
 /* HomePage */
 .banner-text{
     margin: 2px;
-    font-size: 46px;
+    font-size: 48px;
+    text-shadow: -1px -1px 0 BLACK;
 }
 
 .banner{
@@ -116,9 +123,6 @@ nav a:active{
     color: #ffffff;
     width: 100%;
     height: 46vw; 
-
-    text-shadow: #635f5f -7px -6px 15px;
-     /* Find better measurement */
 }
 
 .banner::before{
@@ -130,6 +134,11 @@ nav a:active{
     width: 100%;
     height: 100%;
     filter: blur(3px) grayscale(70%) contrast(1.15);
+    opacity: .8;
+}
+
+.btn p{
+    padding: 1em;
 }
 
 .banner .btn{
@@ -166,6 +175,10 @@ nav a:active{
     flex-direction: column;
     /* Possible additions like: font: bold */
 } 
+
+.banner-inside h2{
+    text-shadow: -1px -1px 0 BLACK;
+}
 
 .spaced-row{
     margin-top: 1em;
@@ -402,8 +415,10 @@ footer i{
 }
 
 .card:hover{
-    width: 22em;
-    height: 22em;
+    position: relative;
+    bottom: 3em;
+    width: 21em;
+    height: 21em;
     cursor: pointer;
 }
 

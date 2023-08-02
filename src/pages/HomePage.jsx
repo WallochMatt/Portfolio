@@ -15,10 +15,11 @@ const HomePage = () => {
                     <hr/>
 
                     <Link to={"/projects"}>
-                        <button className="btn">SEE MY WORK
+                        <button className="btn">
+                            <p>SEE MY WORK
                             &nbsp;
-                            <i className="arrow right"></i>
-                            &nbsp;
+                                <i className="arrow right"></i>
+                            </p>
                         </button>
                     </Link>
 

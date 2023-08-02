@@ -16,8 +16,8 @@ const AboutPage = () => {
             <footer>
                 <h2 className="about-tech">Made with the following</h2>
                 <div>
-                    <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
-                    <i title="CSS 3" class="fa-brands fa-css3-alt custom-fa css-badge"></i>
+                    {/* <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
+                    <i title="CSS 3" class="fa-brands fa-css3-alt custom-fa css-badge"></i> */}
                     <i title="Bootstrap" class="fa-brands fa-bootstrap custom-fa bootstrap-badge"></i>
                     <i title="React" class="fa-brands fa-react custom-fa react-badge"></i>
                     <i title="Font Awesome" class="fa-solid fa-font-awesome custom-fa fontawesome-badge"></i>
