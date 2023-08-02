@@ -283,24 +283,41 @@ footer i{
 }
 
 .github-badge{
-    font-size: 5rem;
+    font-size: 4rem;
     color: #ffffff;
 }
 
 .repo{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
-.gh-link:hover .repo{
-    color: black;
+.gh-link{
+    display: flex;
+    position: fixed;
+    bottom: -1%;
+    right: 1%;
+    flex-direction: column;
+    align-items: flex-end;
 }
+
 
 .gh-link:hover .github-badge{
-    color: black;
+    color: rgb(95, 50, 130);
 }
 
+
+.pop-up{
+    position: relative;
+    z-index: -1;
+    font-size: larger;
+    background-color: #837c8c;
+    border-radius: 10px;
+    padding: 0.75em;
+    transform: translate(-10%, 60%);
+}
 
 .proj-header{
     position: fixed;

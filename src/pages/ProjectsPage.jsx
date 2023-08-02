@@ -45,8 +45,8 @@ const ProjectsPage = () => {
         e.preventDefault();
         setDisplay(
             []
-        )
-    }
+        );
+    };
 
     function checkDisplay(display) {
         if (display.length !== 0) {
@@ -55,28 +55,41 @@ const ProjectsPage = () => {
                     <i className="arrow up"></i>
                 </div>
                 
-            )
-        }
+            );
+        };
+    };
+
+
+
+
+
+    const [popUp, setPopUp] = useState(['']);
+
+    const spawnPopUp = () => {
+        return(
+            <div className="pop-up">
+                See all the repositories on my GitHub!
+            </div>
+            
+        );
     }
+
+    const handleLeave=()=>{
+        return setPopUp('')
+    }
+
+    const handleHover=()=>{
+        return setPopUp(spawnPopUp())
+    }
+
+
+
 
     return ( 
         <main >
             <body className="proj-body">
 
                 <div className="counter-header"></div>
-
-                <div className="proj-header">
-
-                    <div className="gh-link">
-                        <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank"> 
-                            <h2 className="repo">See all my project repositories on Github! &nbsp; &nbsp;
-                                <i title="My Github page" class="fa-brands fa-github custom-fa github-badge"></i>
-                            </h2>
-                        </Link>
-                    </div>
-
-                </div>
-
 
                 <div className="horz-cards">
                     <ProjectCard click={displayComCon} name={'Combat Consensus'} thumbnail={'comcon-img'} descr={""} />
@@ -91,6 +104,18 @@ const ProjectsPage = () => {
                 </div>
 
                 {display}
+
+
+                <div className="gh-link" >
+                    <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank"> 
+                    {popUp}
+                        <h2 className="repo" onMouseOver={handleHover} onMouseLeave={handleLeave}>
+                            <i title="My Github page" class="fa-brands fa-github custom-fa github-badge" ></i>
+                        </h2>
+                    </Link>
+                </div>
+
+
             </body>
         </main>
     );
@@ -98,3 +123,4 @@ const ProjectsPage = () => {
 }
 
 export default ProjectsPage;
+
