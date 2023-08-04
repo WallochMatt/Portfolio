@@ -52,7 +52,7 @@ const ProjectsPage = () => {
         if (display.length !== 0) {
             return(
                 <div className="close-arrow">
-                    <i className="arrow up"></i>
+                    <i className="arrow left"></i>
                 </div>
                 
             );
@@ -87,36 +87,44 @@ const ProjectsPage = () => {
 
     return ( 
         <main >
-            <body className="proj-body">
+            <div className="counter-header"></div>
+            
+            
 
-                <div className="counter-header"></div>
 
-                <div className="horz-cards">
+            <div className="proj-main">
+                <div className="proj-left">
                     <ProjectCard click={displayComCon} name={'Combat Consensus'} thumbnail={'comcon-img'} descr={""} />
-
                     <ProjectCard click={displayCaraCara} name={'Cara Cara'} thumbnail={'cara-img'} descr={""} />
-                    
                     <ProjectCard click={displayUToob} name={'uToob'} thumbnail={'utube-img'} descr={""} />
                 </div>
 
-                <div onClick={displayOff} >
-                    {checkDisplay(display)}
+                <div className="proj-right">
+                    <div onClick={displayOff} >
+                        {checkDisplay(display)}
+                    </div>
+                    {display}
                 </div>
-
-                {display}
-
-
-                <div className="gh-link" >
-                    <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank"> 
-                    {popUp}
-                        <h2 className="repo" onMouseOver={handleHover} onMouseLeave={handleLeave}>
-                            <i title="My Github page" class="fa-brands fa-github custom-fa github-badge" ></i>
-                        </h2>
-                    </Link>
-                </div>
+            </div>
 
 
-            </body>
+
+
+
+
+
+
+            <div className="gh-link" >
+                <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank"> 
+                {popUp}
+                    <h2 className="repo" onMouseOver={handleHover} onMouseLeave={handleLeave}>
+                        <i title="My Github page" class="fa-brands fa-github custom-fa github-badge" ></i>
+                    </h2>
+                </Link>
+            </div>
+
+
+
         </main>
     );
 

@@ -117,9 +117,9 @@ nav a:active{
     transform: rotate(225deg);
     -webkit-transform: rotate(225deg);
 }
-.right{
-    transform: rotate(315deg);
-    -webkit-transform: rotate(315deg);
+.left{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 /* HomePage */
@@ -312,8 +312,25 @@ footer i{
 
 /* ProjectPage */
 .counter-header{
-    min-height: 8em;
+    min-height: 2em;
 }
+
+.proj-main{
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+}
+
+.proj-left{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.proj-right{
+    width: 75%;
+}
+
 
 .github-badge{
     font-size: 4rem;
@@ -365,13 +382,6 @@ footer i{
     /* background-image: linear-gradient(140deg, transparent, #353264 40%, #55447b 73%, #ba83b8); */
 }
 
-.proj-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40em;
-    margin-top: 1.5em;
-}
 
 .close-arrow{
     background: rgba(43, 43, 65, 0.66);
@@ -382,7 +392,8 @@ footer i{
     justify-content: center;
     z-index: 10;
     position: fixed;
-    bottom: 5em;
+    top: 6em;
+    right: 15em;
 }
 
 .close-arrow:hover{
@@ -398,7 +409,7 @@ footer i{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 5% 5%;
+    margin: 0% 5%;
 }
 
 .project .prj-info {
@@ -422,11 +433,6 @@ footer i{
 
 
 /* Cards */
-.horz-cards{
-    display: flex;
-    flex-direction: row;
-}
-
 
 .card{
     width: 20em;
