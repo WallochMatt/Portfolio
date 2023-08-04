@@ -13,7 +13,8 @@ const HomePage = () => {
 
                     {/* <p>"Why do programmers use dark mode? It keeps the bugs away."</p> */}
                     <hr/>
-
+    
+                <div className="banner-buttons">
                     <Link to={"/projects"}>
                         <button className="btn">
                             <p>SEE MY WORK
@@ -22,6 +23,16 @@ const HomePage = () => {
                             </p>
                         </button>
                     </Link>
+
+                    <Link to={"/about"}>
+                        <button className="btn">
+                            <p>LEARN MORE
+                            &nbsp;
+                                <i className="arrow right"></i>
+                            </p>
+                        </button>
+                    </Link>
+                </div>
 
                 </div>
 

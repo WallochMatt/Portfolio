@@ -1,28 +1,73 @@
 
 const AboutPage = () => {
     return ( 
-        <main className="master-align">
-            <body className="about-section">
-                <div className="about">
-                    <div className="prt-large"></div>
-                    <p className="abt-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam non. Arcu bibendum at varius vel pharetra. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Pulvinar sapien et ligula ullamcorper malesuada. Faucibus turpis in eu mi bibendum. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Commodo quis imperdiet massa tincidunt nunc pulvinar. Nisi vitae suscipit tellus mauris a. Ultrices tincidunt arcu non sodales neque sodales ut. Rutrum tellus pellentesque eu tincidunt. Purus semper eget duis at tellus. Malesuada fames ac turpis egestas maecenas. Sit amet est placerat in egestas erat.
-        
-        Nunc congue nisi vitae suscipit tellus mauris a diam maecenas. Augue neque gravida in fermentum et sollicitudin. Cras ornare arcu dui vivamus arcu felis. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Orci ac auctor augue mauris augue. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Ipsum consequat nisl vel pretium. Eros donec ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus molestie. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Pellentesque elit eget gravida cum sociis natoque penatibus et. Ornare lectus sit amet est placerat in egestas erat imperdiet. Sit amet purus gravida quis blandit turpis cursus. Tristique senectus et netus et. Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo.
-        
-        Massa eget egestas purus viverra accumsan in. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Habitant morbi tristique senectus et netus et malesuada fames ac. Nisl suscipit adipiscing bibendum est. Senectus et netus et malesuada fames. Velit sed ullamcorper morbi tincidunt ornare. Sagittis nisl rhoncus mattis rhoncus urna neque. Accumsan sit amet nulla facilisi morbi. Euismod lacinia at quis risus sed vulputate odio. Tortor condimentum lacinia quis vel. Varius sit amet mattis vulputate. In ornare quam viverra orci sagittis eu volutpat odio. Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Quis varius quam quisque id diam vel. Viverra vitae congue eu consequat ac felis. Etiam non quam lacus suspendisse. In iaculis nunc sed augue lacus viverra. In fermentum posuere urna nec tincidunt praesent semper. Sagittis orci a scelerisque purus semper eget.</p>
-                </div>
-            </body>
+        <main className="about">
 
-            <footer>
-                <h2 className="about-tech">Made with the following</h2>
-                <div>
-                    {/* <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
-                    <i title="CSS 3" class="fa-brands fa-css3-alt custom-fa css-badge"></i> */}
-                    <i title="Bootstrap" class="fa-brands fa-bootstrap custom-fa bootstrap-badge"></i>
-                    <i title="React" class="fa-brands fa-react custom-fa react-badge"></i>
-                    <i title="Font Awesome" class="fa-solid fa-font-awesome custom-fa fontawesome-badge"></i>
-                </div>
-            </footer>
+            <div className="about-left">
+                <img src={require("../assets/Portrait.jpeg")} className="portrait"/>
+            </div>
+
+            <div className="about-right">
+                <h1>Welcome</h1>
+                <hr/>
+
+                <p>
+                    Hi, I am Matthew Walloch and I am a fullstack web developer. I'm also a big fan of videogames and art/animation, 
+                    which is where I get my passion for mechanics and design within software. On top of being a developer, I consider
+                    myself a lifelong student. Learning everything may not be possible but I can always try.
+                </p>
+
+                <h1>Header</h1>
+                <p>
+                    I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
+                </p>
+
+
+                <h2>Technologies and frameworks I use:</h2>
+                <ul className="frame-tech">
+                    <li>
+                        <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <i title="CSS 3" class="fa-brands fa-css3-alt custom-fa css-badge"></i>
+                        <p>CSS3</p>
+                    </li>
+                    <li>
+                        <i title="Bootstrap" class="fa-brands fa-bootstrap custom-fa bootstrap-badge"></i>
+                        <p>Bootstrap</p>
+                    </li>
+                    <li>
+                        <i title="React" class="fa-brands fa-react custom-fa react-badge"></i>
+                        <p>React</p>
+                    </li>
+                    <li>
+                        <i title="Font Awesome" class="fa-solid fa-font-awesome custom-fa fontawesome-badge"></i>
+                        <p>Font Awesome</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-python custom-fa"></i>
+                        <p>Python</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-square-js custom-fa"></i>
+                        <p>JavaScript</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-java custom-fa"></i>
+                        <p>Java</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-docker custom-fa"></i>
+                        <p>Docker</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-aws custom-fa"></i>
+                        <p>Amazon Web Services</p>
+                    </li>
+                </ul>
+            </div>
+            
         </main>
         
 

@@ -180,6 +180,12 @@ nav a:active{
     text-shadow: -1px -1px 0 BLACK;
 }
 
+.banner-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 .spaced-row{
     margin-top: 1em;
     width: 98%;
@@ -202,15 +208,8 @@ nav a:active{
 }
 
 .portrait {
-    height: 9em;
-    width: 9em;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: aquamarine;
-    background-image: url(../assets/Portrait.jpeg);
-    background-position: -4rem -3rem;
-    background-size: 150%;
-    background-repeat: no-repeat;
+    transform: translate(-15%, 0%);
+    border-radius: 20px;
 }
 
 .copy-popup{
@@ -239,15 +238,39 @@ nav a:active{
 }
 
 .about{
-    margin: 2em 15%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.abt-text{
-    width: 50%;
+
+.about-right{
+    width: 75%;
+    padding: 3% 5% 1% 5%;
 }
+
+.about-right p{
+    font-size: 1.25rem;
+    width: 75%;
+}
+
+.about-right ul{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.about-left{
+    width: 25%;
+    position: relative;
+}
+
+.frame-tech{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 3em;
+}
+
 
 .custom-fa{
     font-size: 5em;
@@ -283,10 +306,7 @@ footer i{
     padding: 2rem;
 }
 
-.about-section{
-    height: 40em;
-    background-image: linear-gradient(140deg, #b3a4e7 13%, #1f14fa 40%, #00094b 73%, transparent);
-}
+
 
 
 
