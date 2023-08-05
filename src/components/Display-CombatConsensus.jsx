@@ -3,29 +3,42 @@ import { Link } from "react-router-dom";
 const DisplayComCon = () => {
     return ( 
         <div className="project">
-            <h3>Combat Consensus - A scoring consensus application for combat sports</h3>
+            <h2>Combat Consensus - A scoring consensus application for combat sports</h2>
             
             <div className="prj-info">
+                {/* Needs Refactor */}
                 <div>
                     <div className="img-background">
-                        <Link to="http://3.143.230.10/" target="_blank">
-                            <img src={require("../assets/CC-example-1.png")}></img>   
-                        </Link>
+                        <img src={require("../assets/CC-example-1.png")}></img>   
                     </div>  
 
                     <div className="separator"></div>
-    
-                    <div className="img-background">
-                        <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
-                            <img src={require("../assets/CC-example-3.png")}></img>
-                            <div className="youtube-icon">
-                                <i className="fa-brands fa-youtube fa-4x" style={{color: "#ff0000"}}></i>
-                            </div>
-                        </Link>
+
+                    <div className="img-background">  
+                        <img src={require("../assets/CC-example-3.png")}></img>
+                        <div className="youtube-icon">
+                            <i className="fa-brands fa-youtube fa-4x" style={{color: "#ff0000"}}></i>
+                        </div>
                     </div>
                 </div>
     
+
+                {/* Note: Below is a lot of info, I could change the above to be more reusable, and props in the below portion as a component with one master display component*/}
                 <div>
+                    <ul className="link-list">
+                        <li>
+                            <Link to="http://3.143.230.10/" target="_blank">View Site <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i></Link>
+                            &emsp;
+                        </li>
+                        <li>
+                            <Link to="https://github.com/WallochMatt/CombatConsensus-Capstone" target="_blank">Repository <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i></Link>
+                            &emsp;
+                        </li>
+                        <li>
+                            <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">Walkthrough <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i></Link>
+                            &emsp;
+                        </li>
+                    </ul>
                     <p>Example text
                         This example would have psuedo technical documentaion. A more in depth article about the project
                     </p>
@@ -35,9 +48,34 @@ const DisplayComCon = () => {
                         
                         Massa eget egestas purus viverra accumsan in.
                     </p>
+                    <h3>Tech Stack:</h3>
+                    <ul className="frame-tech">
+                        <li>
+                            <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
+                        </li>
+                        <li>
+                            <i title="CSS 3" class="fa-brands fa-css3-alt custom-fa css-badge"></i>
+                        </li>
+                        {/* <li>
+                            <i title="Bootstrap" class="fa-brands fa-bootstrap custom-fa bootstrap-badge"></i>
+                        </li> */}
+                        <li>
+                            <i class="fa-brands fa-python custom-fa python-badge"></i>
+                        </li>
+                        <li>
+                            <i title="React" class="fa-brands fa-react custom-fa react-badge"></i>
+                        </li>
+                        <li>
+                        <i class="fa-brands fa-docker custom-fa docker-badge"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-aws custom-fa aws-badge"></i>
+                        </li>
+                    </ul>
+
+
                 </div>
             </div>
-
         </div>
     );
 }

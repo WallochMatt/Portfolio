@@ -7,13 +7,7 @@ import { Link } from "react-router-dom";
 
 const ProjectsPage = () => {
     const [display, setDisplay] = useState([]);
-    /* const [cardClass, setCardClass] = useState(["card-size"]);
-    Using   setCardClass("card-size add-border") in onClick functions
-    test={cardClass} in the instantiation of the Card
-    Utilizes add-border style
-    If a border for the active Display is needed, I could do 3 separate state functions
-    Looking for a better way to achieve that effect
-*/
+
     const displayComCon = (e) =>{
         e.preventDefault();
         setDisplay        (
@@ -60,9 +54,6 @@ const ProjectsPage = () => {
     };
 
 
-
-
-
     const [popUp, setPopUp] = useState(['']);
 
     const spawnPopUp = () => {
@@ -83,15 +74,10 @@ const ProjectsPage = () => {
     }
 
 
-
-
     return ( 
         <main >
             <div className="counter-header"></div>
             
-            
-
-
             <div className="proj-main">
                 <div className="proj-left">
                     <ProjectCard click={displayComCon} name={'Combat Consensus'} thumbnail={'comcon-img'} descr={""} />
@@ -108,20 +94,14 @@ const ProjectsPage = () => {
             </div>
 
 
-
-
-
-
-
-
-            <div className="gh-link" >
+            {/* <div className="gh-link" >
                 <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank"> 
                 {popUp}
                     <h2 className="repo" onMouseOver={handleHover} onMouseLeave={handleLeave}>
                         <i title="My Github page" class="fa-brands fa-github custom-fa github-badge" ></i>
                     </h2>
                 </Link>
-            </div>
+            </div> */}
 
 
 

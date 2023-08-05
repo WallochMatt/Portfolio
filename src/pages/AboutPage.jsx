@@ -12,19 +12,19 @@ const AboutPage = () => {
                 <hr/>
 
                 <p>
-                    Hi, I am Matthew Walloch and I am a fullstack web developer. I'm also a big fan of videogames and art/animation, 
+                    Hi, I am Matthew Walloch and I'm a fullstack web developer. I'm also a big fan of videogames and art/animation, 
                     which is where I get my passion for mechanics and design within software. On top of being a developer, I consider
                     myself a lifelong student. Learning everything may not be possible but I can always try.
                 </p>
 
-                <h1>Header</h1>
+                <h1></h1>
                 <p>
                     I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
                 </p>
 
 
-                <h2>Technologies and frameworks I use:</h2>
-                <ul className="frame-tech">
+                {/* <h2>Technologies and frameworks I use:</h2> */}
+                {/* <ul className="frame-tech">
                     <li>
                         <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
                         <p>HTML5</p>
@@ -65,7 +65,7 @@ const AboutPage = () => {
                         <i class="fa-brands fa-aws custom-fa"></i>
                         <p>Amazon Web Services</p>
                     </li>
-                </ul>
+                </ul> */}
             </div>
             
         </main>

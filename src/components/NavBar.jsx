@@ -25,13 +25,18 @@ const Navbar = () => {
         
         <nav>
             <ul>
+                {/* <li><a href="/about">ABOUT</a></li>   
+                <li><a href="/projects">PROJECTS</a></li>     */}
                 <li>
                     <a href="/">
                         <i class="fa-solid fa-house" style={{color: '#ffffff'}}></i>
                     </a>
                 </li>
-                {/* <li><a href="/about">ABOUT</a></li>   
-                <li><a href="/projects">PROJECTS</a></li>     */}
+                <li>
+                    <a href="/">
+                        <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
+                    </a>
+                </li>
                 <li onClick={handleClick}>
                     <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i>
                 </li>

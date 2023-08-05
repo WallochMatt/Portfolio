@@ -117,10 +117,18 @@ nav a:active{
     transform: rotate(225deg);
     -webkit-transform: rotate(225deg);
 }
+
 .left{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
+
+.right{
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+}
+
+
 
 /* HomePage */
 .banner-text{
@@ -246,7 +254,7 @@ nav a:active{
 
 .about-right{
     width: 75%;
-    padding: 3% 5% 1% 5%;
+    padding: 6% 5% 1% 5%;
 }
 
 .about-right p{
@@ -267,13 +275,18 @@ nav a:active{
 .frame-tech{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 3em;
+    margin-top: 1em;
+    list-style-type: none;
+    padding: 0;
+}
+
+.frame-tech li{
+    padding: 0.5em;
 }
 
 
 .custom-fa{
-    font-size: 5em;
+    font-size: 2em;
 }
 
 .html-badge{
@@ -293,7 +306,19 @@ nav a:active{
 }
 
 .fontawesome-badge{
-    color: #5b8adc;
+    color: #528dd7;;
+}
+
+.python-badge{
+    color: #5b8adc;;
+}
+
+.docker-badge{
+    color: #2962cd;
+}
+
+.aws-badge{
+    color: #ff9900;
 }
 
 .about-tech{
@@ -325,6 +350,7 @@ footer i{
     display: flex;
     flex-direction: column;
     width: 25%;
+    align-items: center;
 }
 
 .proj-right{
@@ -333,8 +359,9 @@ footer i{
 
 
 .github-badge{
-    font-size: 4rem;
+    /* font-size: 4rem; */
     color: #ffffff;
+    font-size: 24px;
 }
 
 .repo{
@@ -354,9 +381,9 @@ footer i{
 }
 
 
-.gh-link:hover .github-badge{
+/* .gh-link:hover .github-badge{
     color: rgb(95, 50, 130);
-}
+} */
 
 
 .pop-up{
@@ -393,7 +420,7 @@ footer i{
     z-index: 10;
     position: fixed;
     top: 6em;
-    right: 15em;
+    right: 10%;
 }
 
 .close-arrow:hover{
@@ -414,10 +441,10 @@ footer i{
 
 .project .prj-info {
     width: 100%;
-    margin: 3% 0%;
+    /* margin: 3% 0%; */
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-between;
     flex-direction: row;
 }
 
@@ -430,22 +457,36 @@ footer i{
     max-width: 100%;
 } /* Be careful here, this could cause me future issues */
 
+.link-list{
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    flex-direction: row;
+}
+
+.link-list a{
+    text-decoration: underline;
+    font-size: larger;
+}
+
 
 
 /* Cards */
 
 .card{
-    width: 20em;
-    height: 20em;
+    width: 12em;
+    height: 12em;
     margin: 2em;
 }
 
 .card:hover{
     position: relative;
-    bottom: 3em;
-    width: 21em;
-    height: 21em;
+    bottom: 2em;
+    width: 13em;
+    height: 13em;
     cursor: pointer;
+    z-index: 50;
 }
 
 
@@ -475,7 +516,7 @@ footer i{
 
 
 .card-title{
-    font-size: 2rem;
+    font-size: 1.5rem;
 } 
 
 .card-text{
