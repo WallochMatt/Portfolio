@@ -33,7 +33,7 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
                         <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
                     </a>
                 </li>

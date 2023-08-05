@@ -16,9 +16,6 @@ const DisplayComCon = () => {
 
                     <div className="img-background">  
                         <img src={require("../assets/CC-example-3.png")}></img>
-                        <div className="youtube-icon">
-                            <i className="fa-brands fa-youtube fa-4x" style={{color: "#ff0000"}}></i>
-                        </div>
                     </div>
                 </div>
     
@@ -50,12 +47,6 @@ const DisplayComCon = () => {
                     </p>
                     <h3>Tech Stack:</h3>
                     <ul className="frame-tech">
-                        <li>
-                            <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
-                        </li>
-                        <li>
-                            <i title="CSS 3" class="fa-brands fa-css3-alt custom-fa css-badge"></i>
-                        </li>
                         {/* <li>
                             <i title="Bootstrap" class="fa-brands fa-bootstrap custom-fa bootstrap-badge"></i>
                         </li> */}

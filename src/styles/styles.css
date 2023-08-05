@@ -510,7 +510,7 @@ footer i{
     background-repeat: no-repeat;
 }
 
-.card-format:hover::before{
+.card:hover .card-format::before{
     opacity: .3;
 }
 
