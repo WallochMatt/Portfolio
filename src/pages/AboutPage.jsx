@@ -1,23 +1,58 @@
+import { useState } from "react";
+
 
 const AboutPage = () => {
+
+    const [popUp, setPopUp] = useState(['']);
+
+    const spawnPopUp = (text) => {
+        return(
+            <div className="pop-up">
+                {text}
+            </div>
+            
+        );
+    }
+
+    const handleLeave=()=>{
+        return setPopUp('')
+    }
+
+    const handleHoverGit=()=>{
+        return setPopUp(spawnPopUp("See all the repositories on my GitHub!"))
+    }
+
+    const handleHoverLinkedIn=()=>{
+        return setPopUp(spawnPopUp("Check out my LinkedIn profile!"))
+    }
+
+
+
+
+
     return ( 
         <main className="about">
 
             <div className="about-left">
                 <img src={require("../assets/Portrait.jpeg")} className="portrait"/>
-                <p>
+                <p className="email">
                     <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> matthewrwalloch+Hire@gmail.com
                 </p>
+                <hr className="dividing-line"/>
                 <ul className="about-icons">
-                    <li>
+                    <li onMouseOver={handleHoverGit} onMouseLeave={handleLeave}>
                         <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
                             <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
                         </a>
                     </li>
-                    <li>
-                        <i class="fa-brands fa-linkedin linkedin-badge"></i>
+                            
+                    <li onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}>
+                        <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
+                            <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
+                        </a>
                     </li>
                 </ul>
+                {popUp}
             </div>
 
             <div className="about-right">

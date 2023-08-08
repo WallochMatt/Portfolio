@@ -54,26 +54,6 @@ const ProjectsPage = () => {
     };
 
 
-    const [popUp, setPopUp] = useState(['']);
-
-    const spawnPopUp = () => {
-        return(
-            <div className="pop-up">
-                See all the repositories on my GitHub!
-            </div>
-            
-        );
-    }
-
-    const handleLeave=()=>{
-        return setPopUp('')
-    }
-
-    const handleHover=()=>{
-        return setPopUp(spawnPopUp())
-    }
-
-
     return ( 
         <main >
             <div className="counter-header"></div>

@@ -10,6 +10,7 @@ const HomePage = () => {
                     <p className="banner-text">MATTHEW WALLOCH</p>
 
                     <h2>FULLSTACK WEB DEVELOPER</h2>
+
                     <hr/>
     
                 <div className="banner-buttons">
