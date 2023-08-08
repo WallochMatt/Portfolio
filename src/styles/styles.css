@@ -21,7 +21,7 @@ a:link, a:visited{
 /* Nav */
 nav {
     display: flex;
-    height: 4em; /* This is the same height as not selecting a height, so this is to be added for the counter-nav class */
+    height: 5vh;
     align-items: center;
     width: 100%;
     position: fixed;
@@ -79,31 +79,6 @@ nav a:active{
 }
 
 
-
-/* Icons */
-.icon-section{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-}
-
-.youtube-icon{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.img-background{
-    position: relative;
-    max-width: 100% !important; 
-}
-
-.img-background img{
-    margin: 0;
-}
 
 /* Universal */
 .arrow {
@@ -237,6 +212,14 @@ nav a:active{
 
 
 /* AboutPage */
+
+.about-icons{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .prt-large {
     width: 40%;
     display: inline-block;
@@ -321,6 +304,16 @@ nav a:active{
     color: #ff9900;
 }
 
+.linkedin-badge{
+    color: #0964c0;
+}
+
+.github-badge{
+    /* font-size: 4rem; */
+    color: #ffffff;
+    /* font-size: 24px; */
+}
+
 .about-tech{
     display: flex;
     justify-content: center;
@@ -330,9 +323,6 @@ nav a:active{
 footer i{
     padding: 2rem;
 }
-
-
-
 
 
 /* ProjectPage */
@@ -351,6 +341,7 @@ footer i{
     flex-direction: column;
     width: 25%;
     align-items: center;
+    height: 95vh;
 }
 
 .proj-right{
@@ -358,11 +349,15 @@ footer i{
 }
 
 
-.github-badge{
-    /* font-size: 4rem; */
-    color: #ffffff;
-    font-size: 24px;
+.img-background{
+    position: relative;
+    max-width: 100% !important; 
 }
+
+.img-background img{
+    margin: 0;
+}
+
 
 .repo{
     display: flex;
@@ -513,7 +508,6 @@ footer i{
 .card:hover .card-format::before{
     opacity: .3;
 }
-
 
 .card-title{
     font-size: 1.5rem;

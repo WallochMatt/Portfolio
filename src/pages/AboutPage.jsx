@@ -5,6 +5,19 @@ const AboutPage = () => {
 
             <div className="about-left">
                 <img src={require("../assets/Portrait.jpeg")} className="portrait"/>
+                <p>
+                    <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> matthewrwalloch+Hire@gmail.com
+                </p>
+                <ul className="about-icons">
+                    <li>
+                        <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
+                            <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-linkedin linkedin-badge"></i>
+                    </li>
+                </ul>
             </div>
 
             <div className="about-right">
