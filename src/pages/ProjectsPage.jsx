@@ -60,9 +60,9 @@ const ProjectsPage = () => {
             
             <div className="proj-main">
                 <div className="proj-left">
-                    <ProjectCard click={displayComCon} name={'Combat Consensus'} thumbnail={'comcon-img'} descr={""} />
-                    <ProjectCard click={displayCaraCara} name={'Cara Cara'} thumbnail={'cara-img'} descr={""} />
-                    <ProjectCard click={displayUToob} name={'uToob'} thumbnail={'utube-img'} descr={""} />
+                    <ProjectCard click={displayComCon} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
+                    <ProjectCard click={displayCaraCara} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
+                    <ProjectCard click={displayUToob} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />
                 </div>
 
                 <div className="proj-right">

@@ -209,8 +209,6 @@ nav a:active{
 }
 
 
-
-
 /* AboutPage */
 
 .about-icons{
@@ -353,6 +351,7 @@ footer i{
 }
 
 .proj-left{
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -367,6 +366,7 @@ footer i{
 
 .proj-right{
     width: 80%;
+    margin-left: 20%;
 }
 
 
@@ -447,7 +447,7 @@ footer i{
 
 
 
-/* Project */
+/* Project details*/
 .project {
     display: flex;
     flex-direction: column;
@@ -492,76 +492,70 @@ footer i{
 /* Cards */
 
 .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #303058;
+    /* background-color: #e86a6a; temp for visual*/
+    background-clip: border-box;
+    border: 3px solid rgba(0,0,0,.125);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.card-img{
+    border-style: none;
+    vertical-align: middle;
+    width: 100%;
+    margin-bottom: 0;
+
+}
+
+.card-img-top{
     width: 12em;
     height: 12em;
-    margin: 2em;
+    /* width: 100%; */
+    margin-bottom: 0;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    object-fit: cover;
 }
 
-.card:hover{
-    position: relative;
-    bottom: 2em;
-    width: 13em;
-    height: 13em;
-    cursor: pointer;
-    z-index: 50;
+.card:hover .card-img-top{
+    width: 15em;
+    height: 15em;
+    opacity: .4;
 }
 
-
-.card-format{
-    position: relative;
-    display: grid;
-    place-items: center;
-    color: #ffffff;
-    width: 100%;
-    height: 100%; 
-}
-
-.card-format::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.card:hover .card-format::before{
-    opacity: .3;
-}
 
 .card-title{
-    font-size: 1.5rem;
-} 
+    margin: 0.25rem 0.25rem 0.5rem;
+    font-size: 1.4rem;
+}
+
+
+.card-img-overlay{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    padding: 1.25rem;
+    transform: translate(-50%, -50%);
+    color: transparent;
+}
+
+.card:hover .card-img-overlay{
+    color: white;
+}
+
 
 .card-text{
     display: flex;
     position: relative;
     align-items: center;
     flex-direction: column;
-    font-size: large;
-    color: transparent;
-}
-
-.card:hover .card-text{
-    color: white;
-} 
-
-
-/* Card Images */
-
-.comcon-img::before{
-    background-image: url("../assets/CC-example-2.png");
-}
-
-.cara-img::before{
-    background-image: url("../assets/CaraCara-example-1.png");
-    background-position: 50%, 0em;
-}
-
-.utube-img::before{
-    background-image: url("../assets/uToobThumbnail.png");
-    background-position: 44%;
+    font-size: 1.2rem;
 }
 
