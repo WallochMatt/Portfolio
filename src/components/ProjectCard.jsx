@@ -7,10 +7,12 @@ const ProjectCard = (props) => {
         <div className={`card-format ${props.thumbnail}`}>
             <Card.Text>Click to view details</Card.Text>
         </div>
-        <Card.Body>
-            <Card.Title>{props.name}</Card.Title>
-            <Card.Subtitle>{props.descr}</Card.Subtitle>
-        </Card.Body>
+        <Card.Footer>
+            <Card.Body>
+                <Card.Title>{props.name}</Card.Title>
+                <Card.Subtitle>{props.descr}</Card.Subtitle>
+            </Card.Body>
+        </Card.Footer>
     </Card>
     );
 }

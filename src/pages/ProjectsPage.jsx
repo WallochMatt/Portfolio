@@ -56,7 +56,7 @@ const ProjectsPage = () => {
 
     return ( 
         <main >
-            <div className="counter-header"></div>
+            {/* <div className="counter-header"></div> */}
             
             <div className="proj-main">
                 <div className="proj-left">

@@ -39,7 +39,7 @@ const Navbar = () => {
                     </a>
                 </li> */}
                 <li onClick={handleClick}>
-                    CONTACT
+                    EMAIL
                     {/* <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> */}
                 </li>
             </ul>
