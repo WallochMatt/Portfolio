@@ -1,5 +1,5 @@
 import { useState } from "react";
-import DisplayComCon from "../components/Display-CombatConsensus";
+import DisplayComCon from "../components/Display-ComCon";
 import DisplayCaraCara from "../components/Display-CaraCara";
 import DisplayUToob from "../components/Display-uToob";
 import ProjectCard from "../components/ProjectCard";
@@ -8,38 +8,41 @@ import { Link } from "react-router-dom";
 const ProjectsPage = () => {
     const [display, setDisplay] = useState([]);
 
-    const displayComCon = (e) =>{
-        e.preventDefault();
-        setDisplay        (
-            <div>
-                <DisplayComCon />
-            </div>
-        );
-    };
+    const changeDisplay = (chosenDisplay) => {
+        switch (chosenDisplay) {
+            case 0:
+                setDisplay(
+                    []
+                );
+                break;
 
-    const displayCaraCara = (e) =>{
-        e.preventDefault();
-        setDisplay        (
-            <div>
-                <DisplayCaraCara />
-            </div>
-        );
-    };
+            case 1: 
+                console.log("in case 1");
+                setDisplay(
+                    <div>
+                        <DisplayComCon />
+                    </div>
+                );
+                break;
 
-    const displayUToob = (e) =>{
-        e.preventDefault();
-        setDisplay        (
-            <div>
-                <DisplayUToob />
-            </div>
-        );
-    };
-
-    const displayOff = (e) => {
-        e.preventDefault();
-        setDisplay(
-            []
-        );
+            case 2:
+                console.log("in case 2");
+                setDisplay(
+                    <div>
+                        <DisplayCaraCara />
+                    </div>
+                );
+                break;
+                
+            case 3:
+                console.log("in case 3");
+                setDisplay(
+                    <div>
+                        <DisplayUToob />
+                    </div>
+                );
+                break;
+        };
     };
 
     function checkDisplay(display) {
@@ -56,35 +59,20 @@ const ProjectsPage = () => {
 
     return ( 
         <main >
-            {/* <div className="counter-header"></div> */}
-            
             <div className="proj-main">
                 <div className="proj-left">
-                    <ProjectCard click={displayComCon} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
-                    <ProjectCard click={displayCaraCara} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
-                    <ProjectCard click={displayUToob} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />
+                    <ProjectCard click={() => changeDisplay(1)} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
+                    <ProjectCard click={() => changeDisplay(2)} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
+                    <ProjectCard click={() => changeDisplay(3)} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />
                 </div>
 
                 <div className="proj-right">
-                    <div onClick={displayOff} >
+                    <div onClick={() => changeDisplay(0)} >
                         {checkDisplay(display)}
                     </div>
                     {display}
                 </div>
             </div>
-
-
-            {/* <div className="gh-link" >
-                <Link to="https://github.com/WallochMatt?tab=repositories" target="_blank"> 
-                {popUp}
-                    <h2 className="repo" onMouseOver={handleHover} onMouseLeave={handleLeave}>
-                        <i title="My Github page" class="fa-brands fa-github custom-fa github-badge" ></i>
-                    </h2>
-                </Link>
-            </div> */}
-
-
-
         </main>
     );
 

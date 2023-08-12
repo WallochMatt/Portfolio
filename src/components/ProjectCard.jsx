@@ -5,14 +5,14 @@ const ProjectCard = (props) => {
     return (
 
         <Card onClick={props.click}>
-            <Card.Img variant='top' src={require(`../assets/${props.thumbnail}`)} alt='Image' required/>
-            <Card.ImgOverlay>
-                <Card.Text>Click to view details</Card.Text>
-            </Card.ImgOverlay>
             <Card.Body>
                 <Card.Title>{props.name}</Card.Title>
                 {/* <Card.Text>Text example</Card.Text> */}
             </Card.Body>
+            <Card.Img variant='bottom' src={require(`../assets/${props.thumbnail}`)} alt='Image' required/>
+            <Card.ImgOverlay>
+                <Card.Text>Click to view details</Card.Text>
+            </Card.ImgOverlay>
         </Card>
 
 

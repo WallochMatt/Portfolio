@@ -32,7 +32,6 @@ const AboutPage = () => {
 
     return ( 
         <main className="about">
-
             <div className="about-left">
                 <img src={require("../assets/Portrait.jpeg")} className="portrait"/>
                 <p className="email">

@@ -6,7 +6,7 @@ const DisplayComCon = () => {
             <h2>Combat Consensus - A scoring consensus application for combat sports</h2>
             
             <div className="prj-info">
-                {/* Needs Refactor */}
+                {/* Refactor ??? */}
                 <div>
                     <div className="img-background">
                         <img src={require("../assets/CC-example-1.png")}></img>   
@@ -63,8 +63,6 @@ const DisplayComCon = () => {
                             <i class="fa-brands fa-aws custom-fa aws-badge"></i>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
         </div>

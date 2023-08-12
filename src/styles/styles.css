@@ -513,7 +513,7 @@ footer i{
 
 }
 
-.card-img-top{
+.card-img-bottom{
     width: 12em;
     height: 12em;
     /* width: 100%; */
@@ -523,7 +523,7 @@ footer i{
     object-fit: cover;
 }
 
-.card:hover .card-img-top{
+.card:hover .card-img-bottom{
     width: 15em;
     height: 15em;
     opacity: .4;
