@@ -18,18 +18,19 @@ const DisplayCaraCara = () => {
                     </div>
                 </div>
     
-
                 <div>
                     <ul className="link-list">
                         <li>
                             <Link to="http://18.119.156.5/index.html#home_jump" target="_blank">
-                                View Site <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                View Site
+                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://github.com/WallochMatt/eCommerce-Site" target="_blank">
-                                Repository<i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                Repository
+                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>

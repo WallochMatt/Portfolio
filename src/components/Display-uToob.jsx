@@ -25,13 +25,15 @@ const DisplayUToob = () => {
                     <ul className="link-list">
                         <li>
                             <Link href="http://18.222.171.6/" target="_blank">
-                                View Site <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                View Site
+                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://github.com/WallochMatt/YTclone" target="_blank">
-                                Repository <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                Repository
+                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>

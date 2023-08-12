@@ -9,7 +9,7 @@ const Navbar = () => {
                 My email has been copied, I look forward to hearing from you!
             </div>
         );
-    }
+    };
     
     const handleClick=()=>{
         navigator.clipboard.writeText("matthewrwalloch+Hire@gmail.com");
@@ -25,23 +25,10 @@ const Navbar = () => {
         
         <nav>
             <ul>
-                <li>
-                    <a href="/">
-                        HOME
-                        {/* <i class="fa-solid fa-house" style={{color: '#ffffff'}}></i> */}
-                    </a>
-                </li>
+                <li><a href="/">HOME</a></li>
                 <li><a href="/about">ABOUT</a></li>   
                 <li><a href="/projects">PROJECTS</a></li>    
-                {/* <li>
-                    <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
-                        <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
-                    </a>
-                </li> */}
-                <li onClick={handleClick}>
-                    EMAIL
-                    {/* <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> */}
-                </li>
+                <li onClick={handleClick}>EMAIL</li>
             </ul>
             <div>
                 {copiedBlurb}

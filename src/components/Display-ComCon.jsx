@@ -6,7 +6,6 @@ const DisplayComCon = () => {
             <h2>Combat Consensus - A scoring consensus application for combat sports</h2>
             
             <div className="prj-info">
-                {/* Refactor ??? */}
                 <div>
                     <div className="img-background">
                         <img src={require("../assets/CC-example-1.png")}></img>   
@@ -18,26 +17,27 @@ const DisplayComCon = () => {
                         <img src={require("../assets/CC-example-3.png")}></img>
                     </div>
                 </div>
-    
-
-                {/* Note: Below is a lot of info, I could change the above to be more reusable, and props in the below portion as a component with one master display component*/}
+        
                 <div>
                     <ul className="link-list">
                         <li>
                             <Link to="http://3.143.230.10/" target="_blank">
-                                View Site <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                View Site
+                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://github.com/WallochMatt/CombatConsensus-Capstone" target="_blank">
-                                Repository <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                Repository
+                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
-                                Walkthrough <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                Walkthrough
+                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>

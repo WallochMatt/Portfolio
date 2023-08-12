@@ -17,7 +17,6 @@ const ProjectsPage = () => {
                 break;
 
             case 1: 
-                console.log("in case 1");
                 setDisplay(
                     <div>
                         <DisplayComCon />
@@ -26,7 +25,6 @@ const ProjectsPage = () => {
                 break;
 
             case 2:
-                console.log("in case 2");
                 setDisplay(
                     <div>
                         <DisplayCaraCara />
@@ -35,7 +33,6 @@ const ProjectsPage = () => {
                 break;
                 
             case 3:
-                console.log("in case 3");
                 setDisplay(
                     <div>
                         <DisplayUToob />
