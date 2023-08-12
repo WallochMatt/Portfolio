@@ -428,7 +428,7 @@ footer i{
 
 
 .close-arrow{
-    background: rgba(43, 43, 65, 0.66);
+    background: rgb(48 48 88 / 70%);
     display: flex;
     width: 2em;
     height: 2em;

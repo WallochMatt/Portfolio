@@ -24,18 +24,25 @@ const DisplayComCon = () => {
                 <div>
                     <ul className="link-list">
                         <li>
-                            <Link to="http://3.143.230.10/" target="_blank">View Site <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i></Link>
+                            <Link to="http://3.143.230.10/" target="_blank">
+                                View Site <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                            </Link>
                             &emsp;
                         </li>
                         <li>
-                            <Link to="https://github.com/WallochMatt/CombatConsensus-Capstone" target="_blank">Repository <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i></Link>
+                            <Link to="https://github.com/WallochMatt/CombatConsensus-Capstone" target="_blank">
+                                Repository <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                            </Link>
                             &emsp;
                         </li>
                         <li>
-                            <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">Walkthrough <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i></Link>
+                            <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
+                                Walkthrough <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                            </Link>
                             &emsp;
                         </li>
                     </ul>
+                    
                     <p>Example text
                         This example would have psuedo technical documentaion. A more in depth article about the project
                     </p>
@@ -47,9 +54,6 @@ const DisplayComCon = () => {
                     </p>
                     <h3>Tech Stack:</h3>
                     <ul className="frame-tech">
-                        {/* <li>
-                            <i title="Bootstrap" class="fa-brands fa-bootstrap custom-fa bootstrap-badge"></i>
-                        </li> */}
                         <li>
                             <i class="fa-brands fa-python custom-fa python-badge"></i>
                         </li>
