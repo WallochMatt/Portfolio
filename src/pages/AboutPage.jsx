@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from 'react-bootstrap/Card';
 
 
 const AboutPage = () => {
@@ -22,7 +23,7 @@ const AboutPage = () => {
     };
 
 
-    
+
     const [popUp, setPopUp] = useState(['']);
 
     const spawnPopUp = (text) => {
@@ -51,46 +52,58 @@ const AboutPage = () => {
 
 
     return ( 
-        <main className="about">
-            <div  className="about-left">
-                <img src={require("../assets/Portrait.jpeg")} className="portrait"/>
-                <div onMouseOver={handleHoverEmail} onMouseLeave={handleLeave}>
-                    <p onClick={handleClick} className="email">
-                        <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> matthewrwalloch+Hire@gmail.com
-                    </p>
+        <main>
+            <div className="about">
+                <div  className="about-left">
+                    <Card variant="top" id="about-card">
+                        <Card.Img  alt='Image' src={require("../assets/Portrait.jpeg")} required/>
+                        <Card.ImgOverlay>
+                            {popUp}
+                        </Card.ImgOverlay>
+                        <Card.Body className="find-me">
+                            <Card.Title>Find me elsewhere!</Card.Title>
+                            <Card.Text>
+                                <div onMouseOver={handleHoverEmail} onMouseLeave={handleLeave}>
+                                    <p onClick={handleClick} className="email">
+                                        <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> matthewrwalloch+Hire@gmail.com
+                                    </p>
+                                </div>
+                                <hr className="dividing-line"/>
+                                <ul className="about-icons">
+                                    <li onMouseOver={handleHoverGit} onMouseLeave={handleLeave}>
+                                        <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
+                                            <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
+                                        </a>
+                                    </li>
+                                            
+                                    <li onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}>
+                                        <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
+                                            <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    {/* {popUp} */}
                 </div>
-                <hr className="dividing-line"/>
-                <ul className="about-icons">
-                    <li onMouseOver={handleHoverGit} onMouseLeave={handleLeave}>
-                        <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
-                            <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
-                        </a>
-                    </li>
-                            
-                    <li onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}>
-                        <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
-                            <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
-                        </a>
-                    </li>
-                </ul>
-                {popUp}
+
+                <div className="about-right">
+                    <h1>Welcome</h1>
+                    <hr/>
+
+                    <p>
+                        Hi, I am Matthew Walloch and I'm a fullstack web developer. I'm also a big fan of videogames and art/animation, 
+                        which is where I get my passion for mechanics and design within software. On top of being a developer, I consider
+                        myself a lifelong student. Learning everything may not be possible but I can always try.
+                    </p>
+
+                    <h1></h1>
+                    <p>
+                        I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
+                    </p>
+                </div>   
             </div>
-
-            <div className="about-right">
-                <h1>Welcome</h1>
-                <hr/>
-
-                <p>
-                    Hi, I am Matthew Walloch and I'm a fullstack web developer. I'm also a big fan of videogames and art/animation, 
-                    which is where I get my passion for mechanics and design within software. On top of being a developer, I consider
-                    myself a lifelong student. Learning everything may not be possible but I can always try.
-                </p>
-
-                <h1></h1>
-                <p>
-                    I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
-                </p>
-            </div>   
             <div>
                 {copiedBlurb}
             </div>
@@ -99,6 +112,8 @@ const AboutPage = () => {
 }
 
 export default AboutPage;
+
+
 
 
 // Keeping for the potential use of these icons
