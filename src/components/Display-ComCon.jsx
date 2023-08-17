@@ -23,21 +23,21 @@ const DisplayComCon = () => {
                         <li>
                             <Link to="http://3.143.230.10/" target="_blank">
                                 View Site
-                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://github.com/WallochMatt/CombatConsensus-Capstone" target="_blank">
                                 Repository
-                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
                                 Walkthrough
-                                <i class="fa-solid fa-arrow-right right" style={{color: '#ffffff'}}></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square" style={{color: '#ffffff'}}></i>
                             </Link>
                             &emsp;
                         </li>

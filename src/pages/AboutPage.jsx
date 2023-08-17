@@ -2,7 +2,27 @@ import { useState } from "react";
 
 
 const AboutPage = () => {
+    const [copiedBlurb, setCopiedBlurb] = useState(['']);
+    
+    const spawnCopiedBlurb = () => {
+        return(
+            <div className="copy-popup">
+                My email has been copied, I look forward to hearing from you!
+            </div>
+        );
+    };
+    
+    const handleClick=()=>{
+        navigator.clipboard.writeText("matthewrwalloch+Hire@gmail.com");
+        setCopiedBlurb(spawnCopiedBlurb());
+        const timer =  setTimeout(() => {
+            setCopiedBlurb('')
+        }, 2000)
+        return () => clearTimeout(timer);
+    };
 
+
+    
     const [popUp, setPopUp] = useState(['']);
 
     const spawnPopUp = (text) => {
@@ -10,30 +30,35 @@ const AboutPage = () => {
             <div className="pop-up">
                 {text}
             </div>
-            
         );
     }
 
     const handleLeave=()=>{
         return setPopUp('')
-    }
+    };
+
+    const handleHoverEmail=()=>{
+        return setPopUp(spawnPopUp("Click to copy my email"))
+    };
 
     const handleHoverGit=()=>{
         return setPopUp(spawnPopUp("See all the repositories on my GitHub!"))
-    }
+    };
 
     const handleHoverLinkedIn=()=>{
         return setPopUp(spawnPopUp("Check out my LinkedIn profile!"))
-    }
+    };
 
 
     return ( 
         <main className="about">
-            <div className="about-left">
+            <div  className="about-left">
                 <img src={require("../assets/Portrait.jpeg")} className="portrait"/>
-                <p className="email">
-                    <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> matthewrwalloch+Hire@gmail.com
-                </p>
+                <div onMouseOver={handleHoverEmail} onMouseLeave={handleLeave}>
+                    <p onClick={handleClick} className="email">
+                        <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> matthewrwalloch+Hire@gmail.com
+                    </p>
+                </div>
                 <hr className="dividing-line"/>
                 <ul className="about-icons">
                     <li onMouseOver={handleHoverGit} onMouseLeave={handleLeave}>
@@ -66,6 +91,9 @@ const AboutPage = () => {
                     I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
                 </p>
             </div>   
+            <div>
+                {copiedBlurb}
+            </div>
         </main>
     );
 }

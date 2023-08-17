@@ -46,7 +46,7 @@ const ProjectsPage = () => {
         if (display.length !== 0) {
             return(
                 <div className="close-arrow">
-                    <i className="arrow left"></i>
+                    <i class="fa-solid fa-x" style={{color: '#ffffff'}}></i>
                 </div>
                 
             );
