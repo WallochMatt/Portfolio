@@ -1,10 +1,26 @@
-import { useState } from "react";
-import Card from 'react-bootstrap/Card';
+import { useEffect, useState } from "react";
 
 
 const AboutPage = () => {
-    const [copiedBlurb, setCopiedBlurb] = useState(['']);
+
+    const [mousePos, setMousePos] = useState({});
+    useEffect(() => {
+        const handleMouseMove = (event) => {
+            setMousePos({ x: event.clientX, y: event.clientY });
+        };
     
+        window.addEventListener('mousemove', handleMouseMove);
+    
+        return () => {
+            window.removeEventListener(
+                'mousemove',
+                handleMouseMove
+            );
+        };
+    }, []);
+
+
+    const [copiedBlurb, setCopiedBlurb] = useState(['']);
     const spawnCopiedBlurb = () => {
         return(
             <div className="copy-popup">
@@ -18,17 +34,21 @@ const AboutPage = () => {
         setCopiedBlurb(spawnCopiedBlurb());
         const timer =  setTimeout(() => {
             setCopiedBlurb('')
-        }, 2000)
+        }, 20000)
         return () => clearTimeout(timer);
     };
 
 
-
     const [popUp, setPopUp] = useState(['']);
-
     const spawnPopUp = (text) => {
         return(
-            <div className="pop-up">
+            <div className="pop-up" style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px`}}>
+                {/* <div>
+                    The mouse is at position{' '}
+                    <b>
+                        ({mousePos.x}, {mousePos.y})
+                    </b>
+                </div> */}
                 {text}
             </div>
         );
@@ -39,7 +59,7 @@ const AboutPage = () => {
     };
 
     const handleHoverEmail=()=>{
-        return setPopUp(spawnPopUp("Click to copy my email"))
+        return setPopUp(spawnPopUp("Click the email to copy it"))
     };
 
     const handleHoverGit=()=>{
@@ -51,70 +71,64 @@ const AboutPage = () => {
     };
 
 
+
+
     return ( 
         <main>
             <div className="about">
+                <div>
+                    {popUp}
+                    {copiedBlurb}
+                </div>
+
                 <div  className="about-left">
-                    <Card variant="top" id="about-card">
-                        <Card.Img  alt='Image' src={require("../assets/Portrait.jpeg")} required/>
-                        <Card.ImgOverlay>
-                            {popUp}
-                        </Card.ImgOverlay>
-                        <Card.Body className="find-me">
-                            <Card.Title>Find me elsewhere!</Card.Title>
-                            <Card.Text>
-                                <div onMouseOver={handleHoverEmail} onMouseLeave={handleLeave}>
-                                    <p onClick={handleClick} className="email">
-                                        <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}></i> matthewrwalloch+Hire@gmail.com
-                                    </p>
-                                </div>
-                                <hr className="dividing-line"/>
-                                <ul className="about-icons">
-                                    <li onMouseOver={handleHoverGit} onMouseLeave={handleLeave}>
-                                        <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
-                                            <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
-                                        </a>
-                                    </li>
-                                            
-                                    <li onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}>
-                                        <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
-                                            <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    {/* {popUp} */}
+                    <img alt='Image' src={require("../assets/Portrait.jpeg")} required/>
                 </div>
 
                 <div className="about-right">
                     <h1>Welcome</h1>
                     <hr/>
-
                     <p>
                         Hi, I am Matthew Walloch and I'm a fullstack web developer. I'm also a big fan of videogames and art/animation, 
                         which is where I get my passion for mechanics and design within software. On top of being a developer, I consider
                         myself a lifelong student. Learning everything may not be possible but I can always try.
                     </p>
-
-                    <h1></h1>
                     <p>
                         I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
                     </p>
                 </div>   
             </div>
+
+            <hr/>
+
             <div>
-                {copiedBlurb}
+                {/* Link to resume can go in here to */}
+                <span onClick={handleClick} onMouseOver={handleHoverEmail} onMouseLeave={handleLeave} className="email">
+                    <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}>
+                    </i> matthewrwalloch+Hire@gmail.com
+                </span>
+
+                <ul className="about-icons">
+                    <li onMouseOver={handleHoverGit} onMouseLeave={handleLeave}>
+                        <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
+                            <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
+                        </a>
+                    </li>
+                            
+                    <li onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}>
+                        <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
+                            <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
+
+
         </main>
     );
 }
 
 export default AboutPage;
-
-
-
 
 // Keeping for the potential use of these icons
 {/* <ul className="frame-tech">
