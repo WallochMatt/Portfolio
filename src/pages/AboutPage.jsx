@@ -34,7 +34,7 @@ const AboutPage = () => {
         setCopiedBlurb(spawnCopiedBlurb());
         const timer =  setTimeout(() => {
             setCopiedBlurb('')
-        }, 20000)
+        }, 2000)
         return () => clearTimeout(timer);
     };
 
@@ -74,22 +74,20 @@ const AboutPage = () => {
 
 
     return ( 
-        <main>
+        <main className="master-align">
+            
+            <div>
+                {popUp}
+                {copiedBlurb}
+            </div>
+
             <div className="about">
-                <div>
-                    {popUp}
-                    {copiedBlurb}
-                </div>
-
-                <div  className="about-left">
-                    <img alt='Image' src={require("../assets/Portrait.jpeg")} required/>
-                </div>
-
-                <div className="about-right">
-                    <h1>Welcome</h1>
-                    <hr/>
+                <div className="about-left">
+                    <h1 className="big-text">hi</h1>
+                    {/* <hr/> */}
+                    <h2>I am Matthew Walloch and I'm a fullstack web developer.</h2>
                     <p>
-                        Hi, I am Matthew Walloch and I'm a fullstack web developer. I'm also a big fan of videogames and art/animation, 
+                        I'm also a big fan of videogames and art/animation, 
                         which is where I get my passion for mechanics and design within software. On top of being a developer, I consider
                         myself a lifelong student. Learning everything may not be possible but I can always try.
                     </p>
@@ -97,11 +95,13 @@ const AboutPage = () => {
                         I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
                     </p>
                 </div>   
+                <div  className="about-right">
+                    <img alt='Image' src={require("../assets/Portrait.jpeg")} required/>
+                </div>
             </div>
 
-            <hr/>
-
-            <div>
+            <div className="about-below">
+                <h2>Find me elsewhere!</h2>
                 {/* Link to resume can go in here to */}
                 <span onClick={handleClick} onMouseOver={handleHoverEmail} onMouseLeave={handleLeave} className="email">
                     <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}>
