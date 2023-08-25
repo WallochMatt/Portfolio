@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-
 const AboutPage = () => {
 
     const [mousePos, setMousePos] = useState({});
@@ -103,19 +102,25 @@ const AboutPage = () => {
             <div className="about-below">
                 <h2>Find me elsewhere!</h2>
                 {/* Link to resume can go in here to */}
-                <span onClick={handleClick} onMouseOver={handleHoverEmail} onMouseLeave={handleLeave} className="email">
-                    <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}>
-                    </i> matthewrwalloch+Hire@gmail.com
+
+                {/* onMouseOver={handleHoverEmail} onMouseLeave={handleLeave} */}
+                <span onClick={handleClick}  className="email">
+                    {/* <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}> */}
+                    matthewrwalloch+Hire@gmail.com <i class="fa-regular fa-copy"></i>
                 </span>
+                <a href="https://docs.google.com/document/d/1Q2X1WsSptEQrbnsefLShBFnuKuixkTlMYDa27oP1sGU/" target="blank" className="email">
+                    Resume <i class="fa-solid fa-arrow-up-right-from-square" />
+                </a>
 
                 <ul className="about-icons">
-                    <li onMouseOver={handleHoverGit} onMouseLeave={handleLeave}>
+                    {/* onMouseOver={handleHoverGit} onMouseLeave={handleLeave} */}
+                    <li className="badge">
                         <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
                             <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
                         </a>
                     </li>
-                            
-                    <li onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}>
+                    {/* onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}   */}
+                    <li className="badge">
                         <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
                             <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
                         </a>
