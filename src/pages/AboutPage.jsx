@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import RepoInfo from "../components/RepoInfo";
 
 const AboutPage = () => {
 
@@ -84,14 +85,15 @@ const AboutPage = () => {
                 <div className="about-left">
                     <h1 className="big-text">hi</h1>
                     {/* <hr/> */}
-                    <h2>I am Matthew Walloch and I'm a fullstack web developer.</h2>
+                    <h2>I'm Matthew Walloch, a fullstack web developer.</h2>
                     <p>
-                        I'm also a big fan of videogames and art/animation, 
-                        which is where I get my passion for mechanics and design within software. On top of being a developer, I consider
-                        myself a lifelong student. Learning everything may not be possible but I can always try.
-                    </p>
-                    <p>
-                        I attended a coding bootcamp of Computer Science Engineering by devCodeCamp(link?) 
+                    I am driven by a dual passion for video games and art. I've always been captivated by the mechanics behind games and the creativity in art, which naturally led me to the world of software.
+
+My journey to becoming a developer was solidified through devCodeCamp's Computer Science Engineering coding boot camp, where I graduated with distinction. I thrive on the challenge of turning imaginative ideas into functional, visually appealing applications.
+
+What sets me apart is my insatiable appetite for learning. With each project, I strive to fuse technology and creativity to deliver seamless user experiences. I'm on a constant quest to stay updated with the latest industry trends, making sure my skills are always at the cutting edge.
+
+In a nutshell, I'm Matthew Walloch—a passionate fullstack developer who found the perfect blend of inspiration in video games and art, and turned it into a thriving career in software development.
                     </p>
                 </div>   
                 <div  className="about-right">
@@ -100,34 +102,50 @@ const AboutPage = () => {
             </div>
 
             <div className="about-below">
-                <h2>Find me elsewhere!</h2>
+                <h2>Do I have what you're looking for?</h2>
+                <RepoInfo></RepoInfo>
+
+                
+
+
+
+
+
+
+
+
+
+
                 {/* Link to resume can go in here to */}
 
                 {/* onMouseOver={handleHoverEmail} onMouseLeave={handleLeave} */}
-                <span onClick={handleClick}  className="email">
                     {/* <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}> */}
+
+
+                {/* <span onClick={handleClick}  className="email">
                     matthewrwalloch+Hire@gmail.com <i class="fa-regular fa-copy"></i>
                 </span>
                 <a href="https://docs.google.com/document/d/1Q2X1WsSptEQrbnsefLShBFnuKuixkTlMYDa27oP1sGU/" target="blank" className="email">
                     Resume <i class="fa-solid fa-arrow-up-right-from-square" />
-                </a>
+                </a> */}
 
+            {/*
                 <ul className="about-icons">
-                    {/* onMouseOver={handleHoverGit} onMouseLeave={handleLeave} */}
+                    onMouseOver={handleHoverGit} onMouseLeave={handleLeave} 
                     <li className="badge">
                         <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
                             <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
                         </a>
                     </li>
-                    {/* onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}   */}
+                    onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}   
                     <li className="badge">
                         <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
                             <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
                         </a>
                     </li>
                 </ul>
+            */}
             </div>
-
 
         </main>
     );
