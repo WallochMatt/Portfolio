@@ -1,76 +1,66 @@
-import { useState } from "react";
-import DisplayComCon from "../components/Display-ComCon";
-import DisplayCaraCara from "../components/Display-CaraCara";
-import DisplayUToob from "../components/Display-uToob";
-import ProjectCard from "../components/ProjectCard";
-import { Link } from "react-router-dom";
+
+
+import RepoInfo from "../components/RepoInfo";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const ProjectsPage = () => {
-    const [display, setDisplay] = useState([]);
-
-    const changeDisplay = (chosenDisplay) => {
-        switch (chosenDisplay) {
-            case 0:
-                setDisplay(
-                    []
-                );
-                break;
-
-            case 1: 
-                setDisplay(
-                    <div>
-                        <DisplayComCon />
-                    </div>
-                );
-                break;
-
-            case 2:
-                setDisplay(
-                    <div>
-                        <DisplayCaraCara />
-                    </div>
-                );
-                break;
-                
-            case 3:
-                setDisplay(
-                    <div>
-                        <DisplayUToob />
-                    </div>
-                );
-                break;
-        };
+    const [repoData, setRepoData] = useState([]);
+    const [currentData, setCurrentData] = useState([]);
+    
+    async function getAllData(){
+        let response = await axios.get('https://api.github.com/users/WallochMatt/repos');
+        setRepoData(response.data);
+        setCurrentData(response.data);
     };
 
-    function checkDisplay(display) {
-        if (display.length !== 0) {
-            return(
-                <div className="close-arrow">
-                    <i class="fa-solid fa-x" style={{color: '#ffffff'}}></i>
-                </div>
-                
-            );
-        };
+    useEffect(() => {
+        getAllData();
+    }, []);
+
+
+    function filterData(criteria){
+        let results;
+        results = repoData.filter(function(repo){
+            if(repo.language === criteria){
+                return true
+            }
+
+            if (criteria === "none"){
+                return repoData;
+            }
+            
+        })
+        return setCurrentData(results);
     };
+
+    function handleFilter(event){
+        filterData(event);
+    };
+
 
 
     return ( 
-        <main >
-            <div className="proj-main">
-                <div className="proj-left">
-                    <ProjectCard click={() => changeDisplay(1)} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
-                    <ProjectCard click={() => changeDisplay(2)} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
-                    <ProjectCard click={() => changeDisplay(3)} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />
-                </div>
+        <div className="about-below">
+                <h2>Do I have what you're looking for?</h2>
 
-                <div className="proj-right">
-                    <div onClick={() => changeDisplay(0)} >
-                        {checkDisplay(display)}
-                    </div>
-                    {display}
-                </div>
+                <label>Language</label>
+                <select onChange={(event) => handleFilter(event.target.value)}>
+                    <option value={"none"}>--</option>
+                    <option value={"JavaScript"}>JavaScript</option>
+                    <option value={"Java"}>Java</option>
+                    <option value={"Python"}>Python</option>
+                    <option value={"C#"}>C#</option>
+                </select>
+                
+                <ul>
+                    {currentData.map((data) => {
+                        return(
+                            <RepoInfo data={data}></RepoInfo>
+                        )
+                    })};
+                </ul>
             </div>
-        </main>
     );
 
 }
