@@ -71,11 +71,6 @@ const AboutPage = () => {
     };
 
 
-
-    //NEW
-    
-
-
     return ( 
         <main className="master-align">
             
@@ -103,20 +98,6 @@ In a nutshell, I'm Matthew Walloch—a passionate fullstack developer who found 
                     <img alt='Image' src={require("../assets/Portrait.jpeg")} required/>
                 </div>
             </div>
-
-            
-                
-
-                
-
-
-
-
-
-
-
-
-
 
                 {/* Link to resume can go in here to */}
 
@@ -147,8 +128,6 @@ In a nutshell, I'm Matthew Walloch—a passionate fullstack developer who found 
                     </li>
                 </ul>
             */}
-
-
         </main>
     );
 }

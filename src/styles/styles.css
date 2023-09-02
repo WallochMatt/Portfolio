@@ -286,12 +286,7 @@ nav a:active{
 }
 
 
-.about-below{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1%;
-}
+
 
 
 .frame-tech{
@@ -368,7 +363,7 @@ footer i{
 }
 
 
-/* ProjectPage */
+/* DeployedAppsPage */
 .counter-header{
     min-height: 2em;
 }
@@ -469,6 +464,8 @@ footer i{
 
 
 
+
+
 /* Project details*/
 .project {
     display: flex;
@@ -515,8 +512,7 @@ footer i{
 
 
 
-/* Project Cards */
-
+/* DeployedApps Cards */
 .card{
     position: relative;
     display: flex;
@@ -586,3 +582,30 @@ footer i{
 }
 
 
+/* Projects Page */
+.repo-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0%;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.repo-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+}
+
+.repo-slot{
+    padding: 1em;
+    box-shadow: 0px 1px #b0b0e8;
+    width: 100%;
+}
+
+.repo-slot a:hover{
+    text-decoration: underline;
+    color: #9393e8;
+}

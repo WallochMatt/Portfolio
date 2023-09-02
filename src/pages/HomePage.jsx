@@ -12,7 +12,7 @@ const HomePage = () => {
                     <hr/>
 
                     <div className="banner-buttons">
-                        <Link to={"/projects"}>
+                        <Link to={"/myapps"}>
                             <button className="btn">
                                 <p>SEE MY WORK
                                 &nbsp;

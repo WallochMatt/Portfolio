@@ -1,33 +1,24 @@
-
-
 import RepoInfo from "../components/RepoInfo";
-import axios from "axios";
 import { useEffect, useState } from "react";
 
-const ProjectsPage = () => {
-    const [repoData, setRepoData] = useState([]);
+const ProjectsPage = (props) => {
     const [currentData, setCurrentData] = useState([]);
-    
-    async function getAllData(){
-        let response = await axios.get('https://api.github.com/users/WallochMatt/repos');
-        setRepoData(response.data);
-        setCurrentData(response.data);
-    };
 
     useEffect(() => {
-        getAllData();
+        
+        setCurrentData(props.repoData);
     }, []);
 
-
+//refactor needed
     function filterData(criteria){
         let results;
-        results = repoData.filter(function(repo){
+        results = props.repoData.filter(function(repo){
             if(repo.language === criteria){
                 return true
             }
 
             if (criteria === "none"){
-                return repoData;
+                return props.repoData;
             }
             
         })
@@ -39,30 +30,37 @@ const ProjectsPage = () => {
     };
 
 
-
     return ( 
-        <div className="about-below">
-                <h2>Do I have what you're looking for?</h2>
+        <div className="repo-main">
+            <h2>Do I have what you're looking for?</h2>
 
-                <label>Language</label>
-                <select onChange={(event) => handleFilter(event.target.value)}>
-                    <option value={"none"}>--</option>
-                    <option value={"JavaScript"}>JavaScript</option>
-                    <option value={"Java"}>Java</option>
-                    <option value={"Python"}>Python</option>
-                    <option value={"C#"}>C#</option>
-                </select>
-                
-                <ul>
-                    {currentData.map((data) => {
-                        return(
-                            <RepoInfo data={data}></RepoInfo>
+            <label>Language</label>
+            <select onChange={(event) => handleFilter(event.target.value)}>
+                <option value={"none"}>--</option>
+                <option value={"JavaScript"}>JavaScript</option>
+                <option value={"Java"}>Java</option>
+                <option value={"Python"}>Python</option>
+                <option value={"C#"}>C#</option>
+            </select>
+            
+            <ul className="repo-list">
+                {currentData &&
+                currentData.map((data, index) => {
+                    if (data && data.allLanguages){
+
+                        // console.log("data instance of currentData: ", data);
+                        return (
+                            <RepoInfo data={data} key={index}/>
                         )
-                    })};
-                </ul>
-            </div>
+                    }
+                    else{
+                        return null;
+                    }
+                    
+                })}
+            </ul>
+        </div>
     );
-
 }
 
 export default ProjectsPage;

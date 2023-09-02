@@ -3,7 +3,6 @@ import DisplayComCon from "../components/Display-ComCon";
 import DisplayCaraCara from "../components/Display-CaraCara";
 import DisplayUToob from "../components/Display-uToob";
 import ProjectCard from "../components/ProjectCard";
-import { Link } from "react-router-dom";
 
 
 const DeployedAppsPage = () => {
