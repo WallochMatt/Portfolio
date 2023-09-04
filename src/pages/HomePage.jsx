@@ -28,13 +28,3 @@ const HomePage = () => {
 }
 
 export default HomePage;
-
-// Keeping in case I would like to restore the about me button on the landing
-{/* <Link to={"/about"}>
-    <button className="btn">
-        <p>LEARN MORE
-        &nbsp;
-            <i className="arrow right"></i>
-        </p>
-    </button>
-</Link> */}

@@ -218,6 +218,7 @@ nav a:active{
     margin: 0;
     font-size: 3em;
     padding-inline-start: 0em;
+    justify-content: center;
 }
 
 .dividing-line{
@@ -249,8 +250,8 @@ nav a:active{
 
 .about{
     display: flex;
-    margin: 0% 15%;
-    margin-top: 5em;
+    margin: 5em 15% 2em 15%;
+    padding-bottom: 2em;
     border-bottom-style: solid;
     border-color: #a8a8a8;
 }
@@ -510,6 +511,10 @@ footer i{
     color: #b0b0e8;
 }
 
+.link-list i {
+    font-size: .75em;
+}
+
 
 
 /* DeployedApps Cards */
@@ -590,6 +595,7 @@ footer i{
     padding: 0%;
     list-style-type: none;
     text-decoration: none;
+    width: 33%;
 }
 
 .repo-main{
@@ -608,4 +614,8 @@ footer i{
 .repo-slot a:hover{
     text-decoration: underline;
     color: #9393e8;
+}
+
+.repo-slot i{
+    font-size: .75em;
 }

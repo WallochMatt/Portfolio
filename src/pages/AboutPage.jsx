@@ -1,24 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const AboutPage = () => {
-
-    const [mousePos, setMousePos] = useState({});
-    useEffect(() => {
-        const handleMouseMove = (event) => {
-            setMousePos({ x: event.clientX, y: event.clientY });
-        };
-    
-        window.addEventListener('mousemove', handleMouseMove);
-    
-        return () => {
-            window.removeEventListener(
-                'mousemove',
-                handleMouseMove
-            );
-        };
-    }, []);
-
 
     const [copiedBlurb, setCopiedBlurb] = useState(['']);
     const spawnCopiedBlurb = () => {
@@ -39,43 +22,10 @@ const AboutPage = () => {
     };
 
 
-    const [popUp, setPopUp] = useState(['']);
-    const spawnPopUp = (text) => {
-        return(
-            <div className="pop-up" style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px`}}>
-                {/* <div>
-                    The mouse is at position{' '}
-                    <b>
-                        ({mousePos.x}, {mousePos.y})
-                    </b>
-                </div> */}
-                {text}
-            </div>
-        );
-    }
-
-    const handleLeave=()=>{
-        return setPopUp('')
-    };
-
-    const handleHoverEmail=()=>{
-        return setPopUp(spawnPopUp("Click the email to copy it"))
-    };
-
-    const handleHoverGit=()=>{
-        return setPopUp(spawnPopUp("See all the repositories on my GitHub!"))
-    };
-
-    const handleHoverLinkedIn=()=>{
-        return setPopUp(spawnPopUp("Check out my LinkedIn profile!"))
-    };
-
-
     return ( 
         <main className="master-align">
             
             <div>
-                {popUp}
                 {copiedBlurb}
             </div>
 
@@ -99,81 +49,25 @@ In a nutshell, I'm Matthew Walloch—a passionate fullstack developer who found 
                 </div>
             </div>
 
-                {/* Link to resume can go in here to */}
-
-                {/* onMouseOver={handleHoverEmail} onMouseLeave={handleLeave} */}
-                    {/* <i class="fa-solid fa-envelope" style={{color: '#ffffff'}}> */}
-
-
-                {/* <span onClick={handleClick}  className="email">
+            <div>
+                <span onClick={handleClick}  className="email">
                     matthewrwalloch+Hire@gmail.com <i class="fa-regular fa-copy"></i>
                 </span>
-                <a href="https://docs.google.com/document/d/1Q2X1WsSptEQrbnsefLShBFnuKuixkTlMYDa27oP1sGU/" target="blank" className="email">
-                    Resume <i class="fa-solid fa-arrow-up-right-from-square" />
-                </a> */}
-
-            {/*
                 <ul className="about-icons">
-                    onMouseOver={handleHoverGit} onMouseLeave={handleLeave} 
                     <li className="badge">
                         <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
                             <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
                         </a>
                     </li>
-                    onMouseOver={handleHoverLinkedIn} onMouseLeave={handleLeave}   
                     <li className="badge">
                         <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
                             <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
                         </a>
                     </li>
                 </ul>
-            */}
+            </div>
         </main>
     );
 }
 
 export default AboutPage;
-
-// Keeping for the potential use of these icons
-{/* <ul className="frame-tech">
-    <li>
-        <i title="HTML 5" class="fa-brands fa-html5 custom-fa html-badge"></i>
-        <p>HTML5</p>
-    </li>
-    <li>
-        <i title="CSS 3" class="fa-brands fa-css3-alt custom-fa css-badge"></i>
-        <p>CSS3</p>
-    </li>
-    <li>
-        <i title="Bootstrap" class="fa-brands fa-bootstrap custom-fa bootstrap-badge"></i>
-        <p>Bootstrap</p>
-    </li>
-    <li>
-        <i title="React" class="fa-brands fa-react custom-fa react-badge"></i>
-        <p>React</p>
-    </li>
-    <li>
-        <i title="Font Awesome" class="fa-solid fa-font-awesome custom-fa fontawesome-badge"></i>
-        <p>Font Awesome</p>
-    </li>
-    <li>
-        <i class="fa-brands fa-python custom-fa"></i>
-        <p>Python</p>
-    </li>
-    <li>
-        <i class="fa-brands fa-square-js custom-fa"></i>
-        <p>JavaScript</p>
-    </li>
-    <li>
-        <i class="fa-brands fa-java custom-fa"></i>
-        <p>Java</p>
-    </li>
-    <li>
-        <i class="fa-brands fa-docker custom-fa"></i>
-        <p>Docker</p>
-    </li>
-    <li>
-        <i class="fa-brands fa-aws custom-fa"></i>
-        <p>Amazon Web Services</p>
-    </li>
-</ul> */}
