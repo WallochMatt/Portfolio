@@ -4,6 +4,7 @@ import { useState } from "react";
 const AboutPage = () => {
 
     const [copiedBlurb, setCopiedBlurb] = useState(['']);
+
     const spawnCopiedBlurb = () => {
         return(
             <div className="copy-popup">
@@ -17,7 +18,7 @@ const AboutPage = () => {
         setCopiedBlurb(spawnCopiedBlurb());
         const timer =  setTimeout(() => {
             setCopiedBlurb('')
-        }, 2000)
+        }, 2500)
         return () => clearTimeout(timer);
     };
 
@@ -32,39 +33,38 @@ const AboutPage = () => {
             <div className="about">
                 <div className="about-left">
                     <h1 className="big-text">hi</h1>
-                    {/* <hr/> */}
                     <h2>I'm Matthew Walloch, a fullstack web developer.</h2>
                     <p>
-                    I am driven by a dual passion for video games and art. I've always been captivated by the mechanics behind games and the creativity in art, which naturally led me to the world of software.
+                        I am driven by a dual passion for video games and art. I've always been captivated by the mechanics behind games and the creativity in art, which naturally led me to the world of software.
 
-My journey to becoming a developer was solidified through devCodeCamp's Computer Science Engineering coding boot camp, where I graduated with distinction. I thrive on the challenge of turning imaginative ideas into functional, visually appealing applications.
+                        My journey to becoming a developer was solidified through devCodeCamp's Computer Science Engineering coding boot camp, where I graduated with distinction. I thrive on the challenge of turning imaginative ideas into functional, visually appealing applications.
 
-What sets me apart is my insatiable appetite for learning. With each project, I strive to fuse technology and creativity to deliver seamless user experiences. I'm on a constant quest to stay updated with the latest industry trends, making sure my skills are always at the cutting edge.
+                        What sets me apart is my insatiable appetite for learning. With each project, I strive to fuse technology and creativity to deliver seamless user experiences. I'm on a constant quest to stay updated with the latest industry trends, making sure my skills are always at the cutting edge.
 
-In a nutshell, I'm Matthew Walloch—a passionate fullstack developer who found the perfect blend of inspiration in video games and art, and turned it into a thriving career in software development.
+                        In a nutshell, I'm Matthew Walloch—a passionate fullstack developer who found the perfect blend of inspiration in video games and art, and turned it into a thriving career in software development.
                     </p>
+                    <hr/>
+                    <div className="about-socials">
+                        <span onClick={handleClick}  className="email">
+                            matthewrwalloch+Hire@gmail.com <i className="fa-regular fa-copy"></i>
+                        </span>
+                        <ul className="about-icons">
+                            <li className="badge">
+                                <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
+                                    <i title="My Github page" className="fa-brands fa-github github-badge" ></i>
+                                </a>
+                            </li>
+                            <li className="badge">
+                                <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
+                                    <i title="My LinkedIn profile" className="fa-brands fa-linkedin linkedin-badge"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>   
                 <div  className="about-right">
                     <img alt='Image' src={require("../assets/Portrait.jpeg")} required/>
                 </div>
-            </div>
-
-            <div>
-                <span onClick={handleClick}  className="email">
-                    matthewrwalloch+Hire@gmail.com <i class="fa-regular fa-copy"></i>
-                </span>
-                <ul className="about-icons">
-                    <li className="badge">
-                        <a href="https://github.com/WallochMatt?tab=repositories" target='blank'>
-                            <i title="My Github page" class="fa-brands fa-github github-badge" ></i>
-                        </a>
-                    </li>
-                    <li className="badge">
-                        <a href="https://www.linkedin.com/in/mwalloch/" target='blank'>
-                            <i title="My LinkedIn profile" class="fa-brands fa-linkedin linkedin-badge"></i>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </main>
     );

@@ -6,7 +6,6 @@ const DisplayUToob = () => {
             <h2>uToob - A YouTube Parallel</h2>
         
             <div className="prj-info">
-
                 <div>
                     <div className="img-background">
                         <img src={require("../assets/uToob-example-1.png")}></img>
@@ -19,46 +18,69 @@ const DisplayUToob = () => {
                     </div>
                 </div>
 
-
-
                 <div>
                     <ul className="link-list">
                         <li>
                             <Link href="http://18.222.171.6/" target="_blank">
-                                View Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                View Site <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://github.com/WallochMatt/YTclone" target="_blank">
-                                Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                Repository <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
                         </li>
                     </ul>
 
-                    <p>Example text
-                        This example would have psuedo technical documentaion. A more in depth article about the project
+                    <p>
+                        Creating a rich and interactive video comment and playback system is a multifaceted task. User stories serve as our guiding light, 
+                        helping us shape an application that not only meets the needs of our users but also offers a seamless and engaging experience. 
+                        Let's explore the key user stories that kept my partner and I focused on during the development of this application.
                     </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam non. Arcu bibendum at varius vel pharetra. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Pulvinar sapien et ligula ullamcorper malesuada. Faucibus turpis in eu mi bibendum. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Commodo quis imperdiet massa tincidunt nunc pulvinar. Nisi vitae suscipit tellus mauris a. Ultrices tincidunt arcu non sodales neque sodales ut. Rutrum tellus pellentesque eu tincidunt. Purus semper eget duis at tellus. Malesuada fames ac turpis egestas maecenas. Sit amet est placerat in egestas erat.
-    
-                        Nunc congue nisi vitae suscipit tellus mauris a diam maecenas. Augue neque gravida in fermentum et sollicitudin. Cras ornare arcu dui vivamus arcu felis. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Orci ac auctor augue mauris augue. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Ipsum consequat nisl vel pretium. Eros donec ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus molestie. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Pellentesque elit eget gravida cum sociis natoque penatibus et. Ornare lectus sit amet est placerat in egestas erat imperdiet. Sit amet purus gravida quis blandit turpis cursus. Tristique senectus et netus et. Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo.
-                        
-                        Massa eget egestas purus viverra accumsan in.
+                    <p>
+                        In the foundation of our application, we prioritize the creation of data models. The Comment and Reply models form the backbone 
+                        of our comment and reply system, enabling users to engage in meaningful conversations around videos.
+                    </p>
+                    <p>
+                        Efficiently retrieving comments and replies is paramount. These GET endpoints ensure that users can access and engage with 
+                        discussions related to specific videos and comments while maintaining a smooth user experience.
+                    </p>
+                    <p>
+                        Enabling users to contribute to the conversation is essential. These POST endpoints allow registered users to post comments and 
+                        replies, fostering community engagement around videos
+                    </p>
+                    <p>
+                        The ability to edit comments enhances user interaction. This PUT endpoint ensures that users can modify their comments while 
+                        maintaining the integrity of the conversation.
+                    </p>
+                    <p>
+                        Our application aims to provide a comprehensive video-watching experience. These user stories emphasize the integration with 
+                        the YouTube API, enabling users to search for and play videos, access video details, and explore related content seamlessly.
+                    </p>
+                    <p>
+                    Fostering user engagement and interaction is at the core of our project. Registered users can actively participate in discussions by 
+                    adding comments, expressing their preferences through likes and dislikes, and engaging in meaningful conversations by replying to 
+                    comments.
+                    </p>
+                    <p>
+                        We are dedicated to providing a platform that not only enhances the user's video-watching experience but also fosters a vibrant 
+                        and engaging community around shared interests.
                     </p>
                     <h3>Tech Stack:</h3>
                     <ul className="frame-tech">
                         <li>
-                            <i class="fa-brands fa-python custom-fa python-badge"></i>
+                            <i title="Python" className="fa-brands fa-python custom-fa python-badge"></i>
                         </li>
                         <li>
-                            <i title="React" class="fa-brands fa-react custom-fa react-badge"></i>
+                            <i title="React" className="fa-brands fa-react custom-fa react-badge"></i>
                         </li>
                         <li>
-                        <i class="fa-brands fa-docker custom-fa docker-badge"></i>
+                        <i title="Docker" className="fa-brands fa-docker custom-fa docker-badge"></i>
                         </li>
                         <li>
-                            <i class="fa-brands fa-aws custom-fa aws-badge"></i>
+                            <i title="Amazon Web Services" className="fa-brands fa-aws custom-fa aws-badge"></i>
                         </li>
                     </ul>
                 </div>    

@@ -18,27 +18,32 @@ a:link, a:visited{
 }
 
 
+
+
+
 /* Nav */
 nav {
     display: flex;
-    height: 3em;
-    /* height: 5vh; */
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    height: 3em;
+    width: 70%;
+    padding: 0% 15% 0% 15%;
     position: fixed;
+    top: 0%;
     z-index: 999;
     background-color: #303058;
     box-shadow: 5px 3px 1px #15152f;
-    top: 0%;
 }
 
-nav ul {
+
+.nav-pages {
     display: flex;
-    width: 50%;
-    padding-left: 25%;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 40%;
     list-style-type: none;
     text-decoration: none;
+    padding: 0%;
 }
 
 nav li {
@@ -68,16 +73,42 @@ nav a:active{
     height: 3em;
 }
 
-.copy-popup{
-    background-color: #2f2e2e; /* Temporary color */
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    border-radius: 8px;
-    padding: 1em;
-    font-size: large;
-    transform: translate(-50%, -50%)
+
+.nav-icons{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    margin: 0;
+    font-size: 2rem;
+    padding-inline-start: 0em;
+    justify-content: space-between;
+    width: 7%;
 }
+
+.nav-badges:hover{
+    transform: translate(0px, -2px);
+}
+
+.nav-badges i{
+    font-size: 2rem;
+}
+
+.logo{
+    width: 7%;
+}
+
+.logo a{
+    display: flex;
+}
+
+.logo img{
+    border-radius: 8px;
+    height: 2.8em;
+}
+
+
+
+
 
 
 
@@ -103,6 +134,8 @@ nav a:active{
     transform: rotate(315deg);
     -webkit-transform: rotate(315deg);
 }
+
+
 
 
 
@@ -170,7 +203,6 @@ nav a:active{
     position: relative;
     align-items: center;
     flex-direction: column;
-    /* Possible additions like: font: bold */
 } 
 
 .banner-inside h2{
@@ -183,14 +215,8 @@ nav a:active{
     justify-content: space-around;
 }
 
-.spaced-row{
-    margin-top: 1em;
-    width: 98%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-}
+
+
 
 
 /* Universal */
@@ -210,6 +236,9 @@ nav a:active{
 }
 
 
+
+
+
 /* AboutPage */
 .about-icons{
     display: flex;
@@ -218,16 +247,11 @@ nav a:active{
     margin: 0;
     font-size: 3em;
     padding-inline-start: 0em;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.dividing-line{
-    margin-inline-end: 10%;
-    width: 80%;
-}
-
-.about-icons li{
-    padding: 1rem;
+.about-socials{
+    margin-top: 2em;
 }
 
 .email{
@@ -237,29 +261,36 @@ nav a:active{
 }
 
 .email:hover {
-    color: rgb(242, 93, 193);
+    color: rgb(140, 170, 247);
 }
 
-.prt-large {
-    width: 40%;
-    display: inline-block;
-    background-image: url(../assets/Portrait.jpeg);
-    background-size: contain;
-    background-repeat: no-repeat;
+.copy-popup{
+    background-color: #2f2e2e; /* Temporary color */
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    border-radius: 8px;
+    padding: 1em;
+    font-size: large;
+    transform: translate(-50%, -50%)
 }
 
 .about{
     display: flex;
-    margin: 5em 15% 2em 15%;
+    align-items: center;
+    margin: 3em 15% 2em 15%;
     padding-bottom: 2em;
-    border-bottom-style: solid;
-    border-color: #a8a8a8;
-}
+    justify-content: space-around;
 
+    /* border-bottom-style: solid;
+    border-color: #a8a8a8;
+    Bring back if I add more to about page
+    */
+}
 
 .about-left{
     width: 45%;
-    padding-right: 10%;
+    /* padding-right: 10%; */
     margin: 3% 0%;
 }
 
@@ -280,15 +311,76 @@ nav a:active{
 
 .about-right{
     max-height: 60vh;
+    display: flex;
+    justify-content: center;
 }
 
 .about-right img{
     max-height: 60vh;
+    border-radius: 8px;
+}
+
+.badge{
+    padding: 1rem;
+}
+
+.badge:hover{
+    transform: translate(0px, -5px);
+    box-shadow: 0px 2px #b0b0e8;
 }
 
 
 
 
+
+/* Dislays */
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2% 5%;
+}
+
+.project .prj-info {
+    width: 100%;
+    /* margin: 3% 0%; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.prj-info div{
+    max-width: 45%;
+}
+
+.prj-info img{
+    margin: 5% 0em;
+    max-width: 100%;
+} /* Be careful here, this could cause me future issues */
+
+
+.link-list{
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    flex-direction: row;
+}
+
+.link-list a{
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.link-list a:hover{
+    color: #b0b0e8;
+}
+
+.link-list i {
+    font-size: .75em;
+}
 
 .frame-tech{
     display: flex;
@@ -302,10 +394,6 @@ nav a:active{
     padding: 0.5em;
 }
 
-.badge:hover{
-    transform: translate(0px, -5px);
-    box-shadow: 0px 2px #b0b0e8;;
-}
 
 .custom-fa{
     font-size: 2em;
@@ -353,29 +441,23 @@ nav a:active{
     /* font-size: 24px; */
 }
 
-.about-tech{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+.img-background{
+    position: relative;
+    max-width: 100% !important; 
 }
 
-footer i{
-    padding: 2rem;
-}
+
+
 
 
 /* DeployedAppsPage */
-.counter-header{
-    min-height: 2em;
-}
-
-.proj-main{
+.deployed-apps{
     display: flex;
     flex-direction: row;
     /* margin: 0 5%; */
 }
 
-.proj-left{
+.apps-left{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -389,38 +471,13 @@ footer i{
     box-shadow: 1.5px 0px 0px 0px #636363;
 }
 
-.proj-right{
+.apps-right{
     width: 80%;
     margin-left: 20%;
 }
 
 
-.img-background{
-    position: relative;
-    max-width: 100% !important; 
-}
-
-.img-background img{
-    margin: 0;
-}
-
-.repo{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.gh-link{
-    display: flex;
-    position: fixed;
-    bottom: -1%;
-    right: 1%;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-
+/* Goes for a function that has been diabled
 .pop-up{
     position: absolute;
     z-index: 1000;
@@ -429,23 +486,10 @@ footer i{
     border-radius: 10px;
     padding: 0.75em;
     transform: translate( 0%, -100%);
-}
-
-.proj-header{
-    position: fixed;
-    top: 3em;
-    height: 6em;
-    width: 100%;
-    z-index: 50;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: linear-gradient(5deg, #111010, #353264 40%, #55447b 73%, #ba83b8);
-    /* background-image: linear-gradient(140deg, transparent, #353264 40%, #55447b 73%, #ba83b8); */
-}
+} */
 
 
-.close-arrow{
+.close-x{
     background: rgb(48 48 88 / 70%);
     display: flex;
     width: 2em;
@@ -458,61 +502,16 @@ footer i{
     right: 4%;
 }
 
-.close-arrow:hover{
+.close-x:hover{
     cursor: pointer;
 }
 
-
-
-
-
-
-/* Project details*/
-.project {
+.display-help{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 2% 5%;
-}
-
-.project .prj-info {
-    width: 100%;
-    /* margin: 3% 0%; */
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.prj-info div{
-    max-width: 45%;
-}
-
-.prj-info img{
-    margin: 5% 0em;
-    max-width: 100%;
-} /* Be careful here, this could cause me future issues */
-
-.link-list{
-    display: flex;
-    list-style-type: none;
-    text-decoration: none;
-    padding: 0;
-    flex-direction: row;
-}
-
-.link-list a{
-    text-decoration: underline;
-    font-size: larger;
-}
-
-.link-list a:hover{
-    color: #b0b0e8;
-}
-
-.link-list i {
-    font-size: .75em;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: large;
 }
 
 
@@ -525,11 +524,14 @@ footer i{
     min-width: 0;
     word-wrap: break-word;
     background-color: #303058;
-    /* background-color: #e86a6a; temp for visual*/
     background-clip: border-box;
     border: 3px solid rgba(0,0,0,.125);
     border-radius: 0.5rem;
     cursor: pointer;
+}
+
+.card:hover{
+    border: 3px solid rgb(140, 170, 247);
 }
 
 .card-img{
@@ -543,7 +545,6 @@ footer i{
 .card-img-bottom{
     width: 12em;
     height: 12em;
-    /* width: 100%; */
     margin-bottom: 0;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
@@ -605,6 +606,10 @@ footer i{
     margin: 1%;
 }
 
+
+
+
+/* RepoInfo */
 .repo-slot{
     padding: 1em;
     box-shadow: 0px 1px #b0b0e8;

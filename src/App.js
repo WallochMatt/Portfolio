@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/NavBar';
 import "./styles/styles.css"
@@ -17,7 +16,7 @@ function App() {
     
     async function getRepoData(){
         try{
-            let repoResponse = await axios.get('https://api.github.com/users/WallochMatt/repos');
+            let repoResponse = await axios.get('https://api.github.com/users/WallochMatt/repos?per_page=100&');
             repoResponse.data.forEach(async repo => {
                 
                 let languageData = (await axios.get(repo.languages_url)).data;
@@ -35,6 +34,7 @@ function App() {
         }
     };
 
+    //Deactivated for development
     useEffect(() => {
         getRepoData();
     }, []);

@@ -26,20 +26,21 @@ const ProjectsPage = (props) => {
         <div className="repo-main">
             <h2>Do I have what you're looking for?</h2>
 
-            <label>Language</label>
-            <select onChange={(event) => handleFilter(event.target.value)}>
-                <option value={noneSelected}>--</option>
-                <option value={"JavaScript "}>JavaScript</option>
-                <option value={"Java "}>Java</option>
-                <option value={"Python "}>Python</option>
-                <option value={"C# "}>C#</option>
-            </select>
+            <div>
+                <label>Language: </label>
+                <select onChange={(event) => handleFilter(event.target.value)}>
+                    <option value={noneSelected}>--</option>
+                    <option value={"JavaScript "}>JavaScript</option>
+                    <option value={"Java "}>Java</option>
+                    <option value={"Python "}>Python</option>
+                    <option value={"C# "}>C#</option>
+                </select>
+            </div>
             
             <ul className="repo-list">
                 {currentData &&
                 currentData.map((data, index) => {
                     if (data && data.allLanguages){
-
                         return (
                             <RepoInfo data={data} key={index}/>
                         )

@@ -46,24 +46,32 @@ const DeployedAppsPage = () => {
     function checkDisplay(display) {
         if (display.length !== 0) {
             return(
-                <div className="close-arrow">
-                    <i class="fa-solid fa-x" style={{color: '#ffffff'}}></i>
+                <div className="close-x">
+                    <i className="fa-solid fa-x" style={{color: '#ffffff'}}></i>
                 </div>
                 
+            );
+        }
+        else{
+            return(
+                <div className="display-help">
+                    <p>Select an app from the left to see it's information</p>
+                </div>
             );
         };
     };
 
     return ( 
         <main >
-            <div className="proj-main">
-                <div className="proj-left">
+            <div className="deployed-apps">
+                <div className="apps-left">
                     <ProjectCard click={() => changeDisplay(1)} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
                     <ProjectCard click={() => changeDisplay(2)} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
                     <ProjectCard click={() => changeDisplay(3)} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />
                 </div>
 
-                <div className="proj-right">
+                <div className="apps-right">
+                    
                     <div onClick={() => changeDisplay(0)} >
                         {checkDisplay(display)}
                     </div>
