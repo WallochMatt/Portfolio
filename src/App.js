@@ -16,16 +16,17 @@ function App() {
     
     async function getRepoData(){
         try{
-            let repoResponse = await axios.get('https://api.github.com/users/WallochMatt/repos?per_page=100&');
+            let repoResponse = await axios.get('https://personal-githubstatapi-fn.azurewebsites.net/api/GetGithubData');
+            console.log(repoResponse);
             repoResponse.data.forEach(async repo => {
                 
-                let languageData = (await axios.get(repo.languages_url)).data;
-                var allLanguages = "";
+                var convertedLanguages = JSON.parse(repo.allLanguages);
+                var currentLanguages = "";
                 
-                for(let language in languageData){
-                    allLanguages += language + " ";
+                for(let language in convertedLanguages){
+                    currentLanguages += language + " ";
                 }
-                repo.allLanguages = allLanguages;
+                repo.allLanguages = currentLanguages;
             });
             setRepoData(repoResponse.data); 
         }
