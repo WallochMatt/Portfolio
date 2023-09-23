@@ -8,6 +8,7 @@ import ProjectCard from "../components/ProjectCard";
 const DeployedAppsPage = () => {
     
     const [display, setDisplay] = useState([]);
+    console.log(display);
 
     const changeDisplay = (chosenDisplay) => {
         switch (chosenDisplay) {
@@ -64,13 +65,13 @@ const DeployedAppsPage = () => {
     return ( 
         <main >
             <div className="deployed-apps">
-                <div className="apps-left">
+                <div className={`apps-menu${display.length !== 0 ? ' vertical' : ''}`}>
                     <ProjectCard click={() => changeDisplay(1)} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
                     <ProjectCard click={() => changeDisplay(2)} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
                     <ProjectCard click={() => changeDisplay(3)} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />
                 </div>
 
-                <div className="apps-right">
+                <div className={`display-content${display.length !== 0 ? ' on' : ''}`}>
                     
                     <div onClick={() => changeDisplay(0)} >
                         {checkDisplay(display)}

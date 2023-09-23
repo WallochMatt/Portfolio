@@ -17,7 +17,7 @@ function App() {
     async function getRepoData(){
         try{
             let repoResponse = await axios.get('https://personal-githubstatapi-fn.azurewebsites.net/api/GetGithubData');
-            console.log(repoResponse);
+
             repoResponse.data.forEach(async repo => {
                 
                 var convertedLanguages = JSON.parse(repo.allLanguages);
