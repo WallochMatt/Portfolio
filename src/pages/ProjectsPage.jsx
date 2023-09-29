@@ -1,25 +1,50 @@
 import RepoInfo from "../components/RepoInfo";
 import { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
 
 const noneSelected = "--";
 
 const ProjectsPage = (props) => {
+    // const [currentPage, setCurrentPage] = useState(0);
+    const currentPage = useRef(0);
 
     const [currentData, setCurrentData] = useState([]);
 
-    useEffect(() => {
-        
-        setCurrentData(props.repoData);
-    }, []);
-
     function filterData(criteria){
         setCurrentData(criteria == noneSelected ? props.repoData : props.repoData.filter(repo => repo.allLanguages.includes(criteria)));
-    }
-
-
+    };
+    
     function handleFilter(event){
         filterData(event);
     };
+
+
+    const itemsPerPage = 8;
+    const [itemOffset, setItemOffset] = useState(0);
+    const endOffset = itemOffset + itemsPerPage;
+    
+    const currentItems = currentData.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(currentData.length / itemsPerPage);
+
+
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % currentData.length;
+        setItemOffset(newOffset);
+        setCurrentPage(event.selected);
+        console.log("handlePageClick");
+    };
+
+    
+    useEffect(() => {
+        if (!currentData){
+            setCurrentPage(0);
+        }
+        
+        console.log("useEffect played");
+        console.log(currentPage)
+
+    }, [currentData]);
+    
 
 
     return ( 
@@ -38,8 +63,8 @@ const ProjectsPage = (props) => {
             </div>
             
             <ul className="repo-list">
-                {currentData &&
-                currentData.map((data, index) => {
+                {currentItems &&
+                currentItems.map((data, index) => {
                     if (data && data.allLanguages){
                         return (
                             <RepoInfo data={data} key={index}/>
@@ -48,12 +73,28 @@ const ProjectsPage = (props) => {
                     else{
                         return null;
                     }
-                    
                 })}
+                <ReactPaginate
+                    breakLabel="..."
+                    nextLabel="Next >"
+                    previousLabel="< Previous"
+                    
+                    forcePage={currentPage}
+                    onPageChange={handlePageClick}
+
+
+                    pageCount={pageCount}
+                    renderOnZeroPageCount={null}
+                    
+                    containerClassName="pagination"
+                    pageLinkClassName="page-num"
+                    previousLinkClassName="page-num changer"
+                    nextLinkClassName="page-num changer"
+                    activeClassName="active"
+                />
             </ul>
         </div>
     );
 }
 
 export default ProjectsPage;
-

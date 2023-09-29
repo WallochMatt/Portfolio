@@ -621,6 +621,41 @@ nav a:active{
     margin: 1%;
 }
 
+.pagination {
+    padding: 1em;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+    gap: 5px
+}
+
+.pagination .page-num{
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+.pagination .page-num:hover{
+    background-color: #9c8ecf;
+    color: white;
+}
+
+.pagination .changer{
+    background-color: #303058;
+}
+
+.pagination .active{
+    padding: 8px 0px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400;
+    background-color: #9c8ecf;
+}
 
 
 
