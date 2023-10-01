@@ -1,28 +1,31 @@
 import RepoInfo from "../components/RepoInfo";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ReactPaginate from "react-paginate";
 
 const noneSelected = "--";
 
 const ProjectsPage = (props) => {
-    // const [currentPage, setCurrentPage] = useState(0);
-    const currentPage = useRef(0);
+    
+    const [currentPage, setCurrentPage] = useState(0); //issue
+    // const currentPage = useRef(0);
 
     const [currentData, setCurrentData] = useState([]);
 
     function filterData(criteria){
         setCurrentData(criteria == noneSelected ? props.repoData : props.repoData.filter(repo => repo.allLanguages.includes(criteria)));
+        if (!currentData){
+            setCurrentPage(0);
+        }
     };
     
     function handleFilter(event){
         filterData(event);
     };
 
-
+//good
     const itemsPerPage = 8;
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + itemsPerPage;
-    
     const currentItems = currentData.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(currentData.length / itemsPerPage);
 
@@ -30,15 +33,16 @@ const ProjectsPage = (props) => {
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % currentData.length;
         setItemOffset(newOffset);
-        setCurrentPage(event.selected);
-        console.log("handlePageClick");
+
+        setCurrentPage(event.select);
+        // currentPage.current = (event.selected);
+    
     };
 
     
     useEffect(() => {
-        if (!currentData){
-            setCurrentPage(0);
-        }
+
+        // currentPage.current = 0;
         
         console.log("useEffect played");
         console.log(currentPage)
@@ -79,6 +83,9 @@ const ProjectsPage = (props) => {
                     nextLabel="Next >"
                     previousLabel="< Previous"
                     
+                    //issue
+                    
+                    disableInitialCallback={true}
                     forcePage={currentPage}
                     onPageChange={handlePageClick}
 
@@ -91,6 +98,7 @@ const ProjectsPage = (props) => {
                     previousLinkClassName="page-num changer"
                     nextLinkClassName="page-num changer"
                     activeClassName="active"
+
                 />
             </ul>
         </div>
