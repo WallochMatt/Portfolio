@@ -21,8 +21,8 @@ const DisplayUToob = () => {
                 <div>
                     <ul className="link-list">
                         <li>
-                            <Link href="http://18.222.171.6/" target="_blank">
-                                View Site <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            <Link href="" target="_blank">
+                                CURRENTLY OFFLINE <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
                         </li>
