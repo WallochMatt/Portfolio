@@ -21,7 +21,7 @@ const DisplayCaraCara = () => {
                 <div>
                     <ul className="link-list">
                         <li>
-                            <Link to="http://18.119.156.5/index.html#home_jump" target="_blank">
+                            <Link to="https://caracara.azurewebsites.net/" target="_blank">
                                 View Site <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
