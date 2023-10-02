@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav>
             <div className='logo'>
                 <Link to={"/"}>
-                    <img src={require("../assets/M.png")}></img>
+                    <img src={require("../assets/HireMatthewWalloch.png")}></img>
                 </Link>
             </div>
             <ul className='nav-pages'>
