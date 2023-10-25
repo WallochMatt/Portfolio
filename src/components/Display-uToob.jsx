@@ -21,8 +21,8 @@ const DisplayUToob = () => {
                 <div>
                     <ul className="link-list">
                         <li>
-                            <Link href="" target="_blank">
-                                CURRENTLY OFFLINE <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            <Link to="http://3.129.45.197/" target="_blank">
+                                View Site <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
                         </li>
@@ -33,6 +33,15 @@ const DisplayUToob = () => {
                             &emsp;
                         </li>
                     </ul>
+
+                    <p className="note">
+                        NOTE: On August 7, 2023, the relatedVideoId parameter was deprecated. This application relied on that parameter to complete a key feature
+                        within the app. As such, related/suggested videos will not appear. Until further notice, the application will be missing this feature. 
+                        Thank you for your understanding. Details for this deprecation can be found&nbsp;
+                        <a href="https://developers.google.com/youtube/v3/revision_history#june-12,-2023" target="_blank" >
+                            here <i className="fa-solid fa-arrow-up-right-from-square here"></i>
+                        </a>
+                    </p>
 
                     <p>
                         Creating a rich and interactive video comment and playback system is a multifaceted task. User stories serve as our guiding light, 
@@ -57,7 +66,7 @@ const DisplayUToob = () => {
                     </p>
                     <p>
                         Our application aims to provide a comprehensive video-watching experience. These user stories emphasize the integration with 
-                        the YouTube API, enabling users to search for and play videos, access video details, and explore related content seamlessly.
+                        the YouTube API, enabling users to search for and play videos, access video details, <s>and explore related content seamlessly</s>.
                     </p>
                     <p>
                     Fostering user engagement and interaction is at the core of our project. Registered users can actively participate in discussions by 
