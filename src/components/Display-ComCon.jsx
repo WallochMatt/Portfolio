@@ -21,7 +21,7 @@ const DisplayComCon = () => {
                 <div>
                     <ul className="link-list">
                         <li>
-                            <Link to="http://3.142.40.75/" target="_blank">
+                            <Link to="http://52.15.152.115/" target="_blank">
                                 View Site <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
