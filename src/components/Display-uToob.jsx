@@ -21,12 +21,6 @@ const DisplayUToob = () => {
                 <div>
                     <ul className="link-list">
                         <li>
-                            <Link to="http://3.129.45.197/" target="_blank">
-                                View Site <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                            </Link>
-                            &emsp;
-                        </li>
-                        <li>
                             <Link to="https://github.com/WallochMatt/YTclone" target="_blank">
                                 Repository <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
