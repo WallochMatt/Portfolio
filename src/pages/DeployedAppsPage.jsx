@@ -3,6 +3,7 @@ import DisplayComCon from "../components/Display-ComCon";
 import DisplayCaraCara from "../components/Display-CaraCara";
 import DisplayUToob from "../components/Display-uToob";
 import ProjectCard from "../components/ProjectCard";
+import DisplayModal from "../components/DisplayModal";
 
 
 const DeployedAppsPage = () => {
@@ -20,25 +21,19 @@ const DeployedAppsPage = () => {
 
             case 1: 
                 setDisplay(
-                    <div>
-                        <DisplayComCon />
-                    </div>
+                    <DisplayModal display={<DisplayComCon />} setDisplay={setDisplay}/>
                 );
                 break;
 
             case 2:
                 setDisplay(
-                    <div>
-                        <DisplayCaraCara />
-                    </div>
+                    <DisplayModal display={<DisplayCaraCara />} setDisplay={setDisplay}/>
                 );
                 break;
                 
             case 3:
                 setDisplay(
-                    <div>
-                        <DisplayUToob />
-                    </div>
+                    <DisplayModal display={<DisplayUToob />} setDisplay={setDisplay}/>
                 );
                 break;
         };
@@ -49,36 +44,38 @@ const DeployedAppsPage = () => {
             return(
                 <div className="close-x">
                     <i className="fa-solid fa-x" style={{color: '#ffffff'}}></i>
-                </div>
-                
+                </div>  
             );
         }
-        else{
-            return(
-                <div className="display-help">
-                    <p>Select an app from the left to see it's information</p>
-                </div>
-            );
-        };
     };
 
     return ( 
         <main >
-            <div className="deployed-apps">
-                <div className={`apps-menu${display.length !== 0 ? ' vertical' : ''}`}>
-                    <ProjectCard click={() => changeDisplay(1)} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
-                    <ProjectCard click={() => changeDisplay(2)} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
-                    <ProjectCard click={() => changeDisplay(3)} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />
-                </div>
 
-                <div className={`display-content${display.length !== 0 ? ' on' : ''}`}>
-                    
-                    <div onClick={() => changeDisplay(0)} >
-                        {checkDisplay(display)}
-                    </div>
-                    {display}
-                </div>
+            <div className="tighten-cards">
+                <ul className="organize-cards">
+                    <li>
+                        <ProjectCard click={() => changeDisplay(1)} name={'Combat Consensus'} thumbnail={'CC-example-2.png'} descr={""} />
+                    </li>
+                    <li>
+                        <ProjectCard click={() => changeDisplay(2)} name={'Cara Cara'} thumbnail={'CaraCara-example-1.png'} descr={""} />
+                    </li>
+                    <li>
+                        <ProjectCard click={() => changeDisplay(3)} name={'uToob'} thumbnail={'uToobThumbnail.png'} descr={""} />   
+                    </li>
+                </ul>
+                
+                
+                
             </div>
+
+            <div className=""> 
+                <div onClick={() => changeDisplay(0)} >
+                    {checkDisplay(display)}
+                </div>
+                {display}
+            </div>
+
         </main>
     );
 }
