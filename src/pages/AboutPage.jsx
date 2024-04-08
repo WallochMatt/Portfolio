@@ -21,7 +21,7 @@ const AboutPage = () => {
     // });
 
     const [copiedBlurb, setCopiedBlurb] = useState(['']);
-    
+
     const spawnCopiedBlurb = () => {
         return(
             <div className="copy-popup">
@@ -38,48 +38,6 @@ const AboutPage = () => {
         }, 2500)
         return () => clearTimeout(timer);
     };
-
-    const [readMore, setReadMore] = useState([]);
-
-    function handleButton(button) {
-        switch (button) {
-            case 0:
-                setReadMore(
-                    []
-                );
-                break;
-
-            case 1:
-                setReadMore(
-                    <p>
-                        I am driven by a dual passion for video games and art. I've always been captivated by the mechanics behind games and the creativity in art, which naturally led me to the world of software.
-            
-                        My journey to becoming a developer was solidified through devCodeCamp's Computer Science Engineering coding boot camp, where I graduated with distinction. I thrive on the challenge of turning imaginative ideas into functional, visually appealing applications.
-            
-                        What sets me apart is my insatiable appetite for learning. With each project, I strive to fuse technology and creativity to deliver seamless user experiences. I'm on a constant quest to stay updated with the latest industry trends, making sure my skills are always at the cutting edge.
-                    </p>
-                );
-                break;
-        };
-    };
-
-    function checkButton(readMore) {
-        if (readMore.length !== 0) {
-            return(
-                <button className="read-button" onClick={() => handleButton(0)}>
-                    Read Less
-                </button>
-            );
-        }
-        else{
-            return(
-                <button className="read-button" onClick={() => handleButton(1)}>
-                    Read More
-                </button>
-            )
-        };
-    };
-
 
 
     return ( 
@@ -285,7 +243,7 @@ const AboutPage = () => {
             </div>
         </main>
     );
-};
+}
 
 export default AboutPage;
 

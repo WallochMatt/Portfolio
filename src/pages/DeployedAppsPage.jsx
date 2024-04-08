@@ -9,7 +9,6 @@ import DisplayModal from "../components/DisplayModal";
 const DeployedAppsPage = () => {
     
     const [display, setDisplay] = useState([]);
-    console.log(display);
 
     const changeDisplay = (chosenDisplay) => {
         switch (chosenDisplay) {

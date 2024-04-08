@@ -21,20 +21,14 @@ const DisplayComCon = () => {
                 <div>
                     <ul className="link-list">
                         <li>
-                            <Link to="http://3.143.230.10/" target="_blank">
-                                View Site <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
+                                Walkthrough <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
                         </li>
                         <li>
                             <Link to="https://github.com/WallochMatt/CombatConsensus-Capstone" target="_blank">
                                 Repository <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                            </Link>
-                            &emsp;
-                        </li>
-                        <li>
-                            <Link to="https://www.youtube.com/watch?v=fEtIASFDeNY" target="_blank">
-                                Walkthrough <i className="fa-solid fa-arrow-up-right-from-square"></i>
                             </Link>
                             &emsp;
                         </li>
