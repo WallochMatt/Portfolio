@@ -290,7 +290,7 @@ nav a:active{
 .copy-popup{
     background-color: #2f2e2e; /* Temporary color */
     position: fixed;
-    top: 10%;
+    top: 30%;
     left: 50%;
     border-radius: 8px;
     padding: 1em;
@@ -555,49 +555,88 @@ nav a:active{
 
 /* DeployedApps Cards */
 .card{
+    background: #4a5484;
+    /* background: rgb(32, 79, 150); */
+    width: 34em;
+    height: 32em;
+    max-height: 550px;
     position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 2em 0 0 2em;
     display: flex;
     flex-direction: column;
+}
+
+.wide-card{
+    width: 58em;
+}
+/* .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;justify-content: space-between;
     min-width: 0;
     word-wrap: break-word;
     background-color: #303058;
     background-clip: border-box;
     border: 3px solid rgba(0,0,0,.125);
-    border-radius: 0.5rem;
+    border-radius: 20px;
     cursor: pointer;
-}
 
-/* .card:hover{
-    border: 3px solid rgb(140, 170, 247);
+    padding: 3em;
+    height: 30vw;
+    width: 30vw;
 } */
 
-.card-img{
+.card-body {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.card:hover{
+    cursor: pointer;
+    border: 3px solid rgb(140, 170, 247);
+}
+
+/* .card-img{
     border-style: none;
     vertical-align: middle;
     width: 100%;
     margin-bottom: 0;
 
-}
+} */
+
 
 .card-img-bottom{
-    width: 12em;
-    height: 12em;
+    height: 90%;
     margin-bottom: 0;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
     object-fit: cover;
 }
 
+/* .card-img-bottom{
+
+    height: 90%;
+    width: 90%;
+    margin-bottom: 0;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    object-fit: cover;
+} */
+
+
 .card:hover .card-img-bottom{
-    width: 15em;
-    height: 15em;
     opacity: .4;
 }
 
 
 .card-title{
     margin: 0.25rem 0.25rem 0.5rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    /* font-size: 1.4rem; */
 }
 
 
@@ -609,6 +648,7 @@ nav a:active{
     padding: 1.25rem;
     transform: translate(-50%, -50%);
     color: transparent;
+
 }
 
 .card:hover .card-img-overlay{
@@ -621,7 +661,7 @@ nav a:active{
     position: relative;
     align-items: center;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
 }
 
 
@@ -885,4 +925,25 @@ nav a:active{
     border-radius: 50%;
     background-color: #242839;
     color: #fff; 
+}
+
+.separate{
+    margin: 4em;
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+    flex-wrap: wrap;
+    /* margin-block-start: 0;
+    margin-block-end: 0; */
+    padding-inline-start: 0;
+}
+.separate li{
+    margin: 5em 2em;
+    list-style: none;
+
+}
+
+.home-hr{
+    margin-top: 2em;
+    width: 33%;
 }

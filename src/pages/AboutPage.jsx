@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Testimonial from "../components/Testimonial";
 
-import Masonry from "masonry-layout";
+// import Masonry from "masonry-layout";
 
 
 
@@ -47,12 +47,10 @@ const AboutPage = () => {
                 {copiedBlurb}
             </div>
             
-            
             <div className="big-hello special-text">
                 <h1 className="big-text">Hi! I'm Matt.</h1>
                 {/* <h1 className="big-text">A Fullstack Web Developer.</h1> */}
             </div>
-
 
             <div className="about">
                 <div className="about-left">
@@ -98,7 +96,6 @@ const AboutPage = () => {
             <div className="testimonnials" >
                 {/* <div style={{ width: `${maxCol}` }}> */}
                 <div >
-                    
                     <Testimonial reference="
                         It was honestly quite hard for me to select my &quot;Relationship&quot; to Matt. Over the years, our connection has evolved and expanded; we've 
                         been classmates, colleagues, and most recently, I had the pleasure of introducing him to the world of coding.
@@ -219,28 +216,30 @@ const AboutPage = () => {
 
 
             <div className="grid">
-                {/* Explain my dev process */}
                 <div className="grid-item">
                     <h3 className="grid-num">1</h3>
-                    <h3 className="special-text">Plan</h3>
-                    <p>Lorem ipsum dolor sit amet,Enim ut tellus elementum sagittis. Nibh tortor id aliquet lectus proin nibh. Eget felis eget nunc lobortis mattis aliquam faucibus.</p>
+                    <h3 className="special-text">Plan It Out</h3>
+                    <p>I define project goals and requirements, creating mockups to visualize layout and functionality. As well as establish a clear timeline and roadmap for development.</p>
                 </div>
                 <div className="grid-item">
                     <h3 className="grid-num">2</h3>
-                    <h3 className="special-text">Step</h3>
-                    <p>Lorem ipsum dolor sit amet,Enim ut tellus elementum sagittis. Nibh tortor id aliquet lectus proin nibh. Eget felis eget nunc lobortis mattis aliquam faucibus.</p>
+                    <h3 className="special-text">Get It Working</h3>
+                    <p>I focus on developing the core functionality and ensuring the application works as intended. I conduct surface-level testing to ensure basic functionality and identify any immediate issues.</p>
                 </div>
                 <div className="grid-item">
                     <h3 className="grid-num">3</h3>
-                    <h3 className="special-text">Step</h3>
-                    <p>Lorem ipsum dolor sit amet,Enim ut tellus elementum sagittis. Nibh tortor id aliquet lectus proin nibh. Eget felis eget nunc lobortis mattis aliquam faucibus.</p>
+                    <h3 className="special-text">Make It Pretty</h3>
+                    <p>I enhance the user interface and design elements to improve the overall user experience. I pay attention not only to visual aesthetics but also to the organization and readability of my code.</p>
                 </div>
                 <div className="grid-item">
                     <h3 className="grid-num">4</h3>
-                    <h3 className="special-text">Step</h3>
-                    <p>Lorem ipsum dolor sit amet,Enim ut tellus elementum sagittis. Nibh tortor id aliquet lectus proin nibh. Eget felis eget nunc lobortis mattis aliquam faucibus.</p>
+                    <h3 className="special-text">Always Be Improving</h3>
+                    <p>I then continuously iterate and refine the application, adding new features, optimizing performance, and addressing user feedback.</p>
                 </div>
             </div>
+
+            <footer></footer>
+
         </main>
     );
 }

@@ -27,9 +27,9 @@ const Navbar = () => {
                 </Link>
             </div> */}
             <ul className={color ? ' nav-pages nav-color-on' : 'nav-pages'}>
-            <li><Link to={"/"}>HOME /</Link></li> 
+            <li><Link to={"/"}>HOME </Link></li> 
                 <li><Link to={"/about"}>ABOUT</Link></li>   
-                <li><Link to={"/myapps"}>MY APPS</Link></li>   
+                {/* <li><Link to={"/myapps"}>MY APPS</Link></li>    */}
                 <li><Link to={"/projects"}>PROJECTS</Link></li>    
             </ul>
             {/* <ul className="nav-icons">
