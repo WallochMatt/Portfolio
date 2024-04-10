@@ -43,7 +43,8 @@ function App() {
 
 
     return (
-        <div >
+        <div className="">
+            <div className="master-div"></div>
             <header className="counter-nav"></header>
             <Navbar />
             <Routes>
@@ -52,6 +53,10 @@ function App() {
                 <Route path="/myapps" element={<DeployedAppsPage />}/>
                 <Route path="/projects" element={<ProjectsPage repoData={repoData}/>}/>
             </Routes>
+            
+            <div className='logo'>
+                <img src={require("./assets/HireMatthewWalloch.png")}></img>
+            </div>
         </div>
     );
 }
