@@ -55,16 +55,20 @@ const AboutPage = () => {
             <div className="about">
                 <div className="about-left">
                     <h1 className="special-text">I am a Fullstack Web Developer in Southeast Wisconsin</h1>
+                    {/* Possibly separate these to appear as paragraphs and not one wall of text */}
                     <p>
-                        I am driven by a dual passion for video games and art. I've always been captivated by the mechanics behind games and the creativity in art, which naturally led me to the world of software.
+                    My first interest in software came from video games. Not uncommon, I know, but I was captivated by virtual worlds. This fascination 
+                    drove me to delve into what I'd eventually learn as logic gates and algorithms. Of course I wouldn't know the similarities until after 
+                    I switched to computer science from art/animation.
 
-                        My journey to becoming a developer was solidified through devCodeCamp's Computer Science Engineering coding boot camp, where I graduated with distinction. I thrive on the challenge of turning imaginative ideas into functional, visually appealing applications.
+                    Enrolling in devCodeCamp's Computer Science Engineering program provided me with a structured environment to channel my innate curiosity 
+                    and blend the systematic rigor of programming with the creativity honed through years of artistic endeavors. Here, I merged my love for 
+                    creativity with the precision of programming, cultivating a unique skill set that blends artistic flair with technical expertise.
 
-                        What sets me apart is my insatiable appetite for learning. With each project, I strive to fuse technology and creativity to deliver seamless user experiences. I'm on a constant quest to stay updated with the latest industry trends, making sure my skills are always at the cutting edge.
-
-                        In a nutshell, I'm Matthew Walloch—a passionate fullstack developer who found the perfect blend of inspiration in video games and art, and turned it into a career in software.
+                    Driven by a relentless hunger for knowledge and self-improvement, I continually seek opportunities to expand my skills and deepen my 
+                    understanding of software development. My unique blend of artistic sensibility and technical acumen positions me as a versatile and 
+                    innovative problem-solver, ready to tackle the challenges of modern software development with precision and dedication
                     </p>
-                    {/* <hr/> */}
                     {/* <div className="about-socials">
                         <span onClick={handleClick}  className="email">
                             matthewrwalloch+Hire@gmail.com <i className="fa-regular fa-copy"></i>
@@ -205,7 +209,7 @@ const AboutPage = () => {
                 </h1>
 
                 <p>
-                    I prioritize practical skills over traditional education, bringing a fresh perspective and a commitment to growth. If you're looking 
+                    I prioritize practical skills, bringing a fresh perspective and a commitment to growth. If you're looking 
                     for someone adaptable and driven, let's connect!
 
                     <span onClick={handleClick}  className="email">
@@ -213,7 +217,7 @@ const AboutPage = () => {
                     </span>
                 </p>
             </div>
-
+            {/*  over traditional education */}
 
             <div className="grid">
                 <div className="grid-item">
