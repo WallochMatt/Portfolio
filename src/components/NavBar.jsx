@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
+    const [navHighlighter, setNavHighlighter] = useState([false]);
+    
 
 
     const [color, setColor] = useState(false);
+
     const changeColor = () => {
         if (window.scrollY >= 90){
             setColor(true)
@@ -21,27 +24,30 @@ const Navbar = () => {
 
     return (
         <nav>
-            {/* <div className='logo'>
-                <Link to={"/"}>
-                    <img src={require("../assets/HireMatthewWalloch.png")}></img>
-                </Link>
-            </div> */}
             <ul className={color ? ' nav-pages nav-color-on' : 'nav-pages'}>
                 <li>
-                    <Link to={"/"} className='nav-option'>
+                    <NavLink 
+                        to={"/"} 
+                        className={({ isActive }) => 
+                            [
+                                isActive ? "active nav-option" : "nav-option"
+                            ].join(" ")
+                        } 
+
+                    >
                         HOME 
                         <span className='slash'>/</span>
-                    </Link></li> 
+                    </NavLink>
+                </li> 
                 <li>
-                    <Link to={"/about"} className='nav-option'>
+                    <NavLink to={"/about"} className='nav-option'>
                         ABOUT
-                        </Link>
-                    </li>   
-                {/* <li><Link to={"/myapps"}>MY APPS</Link></li>    */}
+                    </NavLink>
+                </li>   
                 <li>
-                    <Link to={"/projects"} className='nav-option'>
+                    <NavLink to={"/projects"} className='nav-option'>
                         PROJECTS
-                    </Link>
+                    </NavLink>
                 </li>    
             </ul>
             {/* <ul className="nav-icons">

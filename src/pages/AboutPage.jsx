@@ -7,49 +7,17 @@ import Testimonial from "../components/Testimonial";
 
 
 
-const AboutPage = () => {
+const AboutPage = (props) => {
 
-    // var colWidth = 40;
-    // var maxCol = colWidth * 4;
-
-    // var msnry = new Masonry( '.testimonnials', {
-    //     // options
-    //     itemSelector: '.recommends',
-    //     columnWidth: colWidth,
-    //     fitWidth: true,
-    //     gutter: 0,
-    // });
-
-    const [copiedBlurb, setCopiedBlurb] = useState(['']);
-
-    const spawnCopiedBlurb = () => {
-        return(
-            <div className="copy-popup">
-                My email has been copied, I look forward to hearing from you!
-            </div>
-        );
-    };
-    
-    const handleClick=()=>{
-        navigator.clipboard.writeText("matthewrwalloch+Hire@gmail.com");
-        setCopiedBlurb(spawnCopiedBlurb());
-        const timer =  setTimeout(() => {
-            setCopiedBlurb('')
-        }, 2500)
-        return () => clearTimeout(timer);
-    };
 
 
     return ( 
         <main className="master-align">
             
-            <div>
-                {copiedBlurb}
-            </div>
+
             
             <div className="big-hello special-text">
                 <h1 className="big-text">Hi! I'm Matt.</h1>
-                {/* <h1 className="big-text">A Fullstack Web Developer.</h1> */}
             </div>
 
             <div className="about">
@@ -212,7 +180,7 @@ const AboutPage = () => {
                     I prioritize practical skills, bringing a fresh perspective and a commitment to growth. If you're looking 
                     for someone adaptable and driven, let's connect!
 
-                    <span onClick={handleClick}  className="email">
+                    <span onClick={props.handleClick}  className="email">
                         <i className="fa-solid fa-envelope" style= {{color: "#ffffff;" }}></i>
                     </span>
                 </p>
