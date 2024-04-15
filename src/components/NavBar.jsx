@@ -6,7 +6,6 @@ const Navbar = () => {
     const [navHighlighter, setNavHighlighter] = useState([false]);
     
 
-
     const [color, setColor] = useState(false);
 
     const changeColor = () => {
@@ -49,6 +48,7 @@ const Navbar = () => {
                         PROJECTS
                     </NavLink>
                 </li>    
+
             </ul>
             {/* <ul className="nav-icons">
                 <li className="nav-badges">
