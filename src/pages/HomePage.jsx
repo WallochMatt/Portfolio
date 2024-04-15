@@ -55,6 +55,11 @@ const HomePage = () => {
                 <hr className="home-hr"/>
             </div>
 
+            <div className="intro-message">
+                <p>
+                    I'm focused on creating applications that are engaging, accessible and easy-to-use.
+                </p>
+            </div>
 
             <div className="">
                 <ul className="separate">
