@@ -26,15 +26,7 @@ const Navbar = () => {
         <nav>
             <ul className={color ? ' nav-pages nav-color-on' : 'nav-pages'}>
                 <li>
-                    <NavLink 
-                        to={"/"} 
-                        className={({ isActive }) => 
-                            [
-                                isActive ? "active nav-option" : "nav-option"
-                            ].join(" ")
-                        } 
-
-                    >
+                    <NavLink to={"/"} className='nav-option'>
                         HOME 
                         <span className='slash'>/</span>
                     </NavLink>
