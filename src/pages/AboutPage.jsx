@@ -19,7 +19,7 @@ const AboutPage = (props) => {
             <div className="big-hello special-text">
                 <h1 className="big-text">Hi! I'm Matt.</h1>
             </div>
-
+     
             <div className="about">
                 <div className="about-left">
                     <h1 className="special-text">I am a Fullstack Web Developer in Southeast Wisconsin</h1>
@@ -32,6 +32,7 @@ const AboutPage = (props) => {
                     Enrolling in devCodeCamp's Computer Science Engineering program provided me with a structured environment to channel my innate curiosity 
                     and blend the systematic rigor of programming with the creativity honed through years of artistic endeavors. Here, I merged my love for 
                     creativity with the precision of programming, cultivating a unique skill set that blends artistic flair with technical expertise.
+
 
                     Driven by a relentless hunger for knowledge and self-improvement, I continually seek opportunities to expand my skills and deepen my 
                     understanding of software development. My unique blend of artistic sensibility and technical acumen positions me as a versatile and 
@@ -175,7 +176,6 @@ const AboutPage = (props) => {
                 <h1 className="special-text"> 
                     Let's collaborate if you're committed to sustainability and fostering continuous learning.
                 </h1>
-
                 <p>
                     I prioritize practical skills, bringing a fresh perspective and a commitment to growth. If you're looking 
                     for someone adaptable and driven, let's connect!
@@ -186,6 +186,7 @@ const AboutPage = (props) => {
                 </p>
             </div>
             {/*  over traditional education */}
+
 
             <div className="grid">
                 <div className="grid-item">

@@ -77,6 +77,7 @@ function App() {
                 <Route path="/projects" element={<ProjectsPage repoData={repoData}/>}/>
             </Routes>
             
+
             <div>
                 {copiedBlurb}
             </div>
@@ -125,7 +126,6 @@ function App() {
                         </li>
                     </ul>
                 </div>
-
             </footer>
         </div>
         
