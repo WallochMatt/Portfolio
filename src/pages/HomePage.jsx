@@ -51,14 +51,26 @@ const HomePage = () => {
                 );
                 handleShowModal();
                 break;
+            };
         };
-    };
+        
+        
+        
+        return (
+            <main className="">
 
-
-
-    return (
-        <main className="">
-
+            <div className="big-hello special-text">
+                <h1 className="big-text">Matthew Walloch</h1>
+                <h1 className="big-text">Fullstack Web Developer</h1>
+                <hr className="home-hr"/>
+            </div>
+            
+            <div className="intro-message">
+                <p>
+                    I'm focused on creating applications that are engaging, accessible and easy-to-use.
+                </p>
+            </div>
+            
             <div className="">
                 <ul className="separate">
                     <li>
@@ -104,15 +116,3 @@ export default HomePage;
 </div>
 </div>
 </div> */}
-
-            {/* <div className="big-hello special-text">
-                <h1 className="big-text">Matthew Walloch</h1>
-                <h1 className="big-text">Fullstack Web Developer</h1>
-                <hr className="home-hr"/>
-            </div>
-
-            <div className="intro-message">
-                <p>
-                    I'm focused on creating applications that are engaging, accessible and easy-to-use.
-                </p>
-            </div> */}
