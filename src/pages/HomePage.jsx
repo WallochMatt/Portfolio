@@ -70,7 +70,7 @@ const HomePage = () => {
                     I'm focused on creating applications that are engaging, accessible and easy-to-use.
                 </p>
             </div>
-            
+
             <div className="">
                 <ul className="separate">
                     <li>
